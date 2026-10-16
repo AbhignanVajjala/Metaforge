@@ -1,0 +1,455 @@
+ Model: iHK1487
+Name: Escherichia coli str. B substr. BL21(DE3)
+Reactions: 2701
+Metabolites: 1877
+Genes: 1488
+Objective: Maximize
+1.0*BIOMASS_Ec_iHK1487_core - 1.0*BIOMASS_Ec_iHK1487_core_reverse_c9aec
+MODEL: iHK1487
+OBJECTIVE: Maximize
+1.0*BIOMASS_Ec_iHK1487_core - 1.0*BIOMASS_Ec_iHK1487_core_reverse_c9aec
+
+BASELINE STATUS: optimal
+BASELINE GROWTH: 0.8199949155930281
+EX_glc__D_e | D-Glucose exchange | (-10.0, 1000.0)
+ATPM | ATP maintenance requirement | (5.17, 1000.0)
+EX_o2_e | O2 exchange | (-18.5, 1000.0)
+
+ACTIVE MEDIUM ENTRIES: 24
+PROINSULIN LENGTH: 86
+AMINO ACID COMPOSITION: {'F': 3, 'V': 6, 'N': 3, 'Q': 7, 'H': 2, 'L': 12, 'C': 6, 'G': 11, 'S': 5, 'E': 8, 'A': 4, 'Y': 4, 'R': 4, 'T': 3, 'P': 3, 'K': 2, 'D': 1, 'I': 2}
+EMPIRICAL FORMULA: C410H641N114O127S6
+APPROXIMATE MOLECULAR WEIGHT: 9391.55414 g/mol
+TRANSLATION ENERGY: 344 ATP equivalents/molecule
+SYNTHESIS REACTION: MF_PROINSULIN_SYN
+PRODUCT OUTLET: MF_DM_PROINSULIN
+MASS/CHARGE BALANCE: Balanced
+
+===== PROINSULIN FBA RESULTS =====
+STATUS: optimal
+REFERENCE GROWTH: 0.8199949155930478
+REQUIRED GROWTH: 0.6559959324744383
+MAXIMUM PROINSULIN FLUX: 0.02475297812469452
+UNITS: mmol proinsulin / gDCW / hour
+THEORETICAL PROTEIN MASS FLUX: 0.23246893418430425 g / gDCW / hour
+SYNTHESIS FLUX: 0.02475297812469452
+
+Original iHK1487 remains unchanged.
+ Growth requirement (%)  Actual growth (1/h)  Proinsulin (mmol/gDCW/h)  Proinsulin (g/gDCW/h)  Status
+                   20.0             0.163999              8.652630e-02           8.126164e-01 optimal
+                   40.0             0.327998              6.717518e-02           6.308793e-01 optimal
+                   60.0             0.491997              4.782406e-02           4.491422e-01 optimal
+                   70.0             0.573996              3.707689e-02           3.482096e-01 optimal
+                   80.0             0.655996              2.475298e-02           2.324689e-01 optimal
+                   90.0             0.737995              1.242907e-02           1.167283e-01 optimal
+                   95.0             0.778995              6.232223e-03           5.853026e-02 optimal
+                  100.0             0.819995              1.523507e-16           1.430810e-15 optimal
+GROWTH: 0.6559959324744383
+PROINSULIN: 0.024752978124692435
+
+ACTUAL EXCHANGE FLUXES:
+Negative flux generally indicates uptake.
+EX_h2o_e                     44.109209 | H2O exchange
+EX_co2_e                     20.345355 | CO2 exchange
+EX_o2_e                     -18.500000 | O2 exchange
+EX_glc__D_e                 -10.000000 | D-Glucose exchange
+EX_h_e                        9.997302 | H+ exchange
+EX_nh4_e                     -9.906033 | Ammonia exchange
+EX_ac_e                       1.214042 | Acetate exchange
+EX_pi_e                      -0.632409 | Phosphate exchange
+EX_so4_e                     -0.313711 | Sulfate exchange
+EX_for_e                      0.151802 | Formate exchange
+EX_k_e                       -0.128046 | K+ exchange
+EX_mg2_e                     -0.005691 | Mg exchange
+EX_fe2_e                     -0.005415 | Fe2+ exchange
+EX_fe3_e                     -0.005122 | Fe3+ exchange
+EX_cl_e                      -0.003415 | Chloride exchange
+EX_ca2_e                     -0.003415 | Calcium exchange
+EX_cu2_e                     -0.000465 | Cu2+ exchange
+EX_mn2_e                     -0.000454 | Mn2+ exchange
+EX_zn2_e                     -0.000224 | Zinc exchange
+EX_ni2_e                     -0.000212 | Ni2+ exchange
+EX_cobalt2_e                 -0.000017 | Co2+ exchange
+EX_mobd_e                    -0.000005 | Molybdate exchange
+EX_meoh_e                     0.000001 | Methanol exchange
+
+TRANSLATION ENERGY DEMAND:
+8.515024474894197 mmol ATP equivalents/gDCW/h
+    Scenario  Proinsulin flux   Growth  Glucose uptake  Oxygen uptake  Status  Change (%)
+   Reference         0.024753 0.655996            10.0      18.500000 optimal    0.000000
+Glucose +10%         0.030007 0.655996            11.0      18.500000 optimal   21.227128
+ Oxygen +10%         0.028473 0.655996            10.0      19.401963 optimal   15.028333
+   Both +10%         0.037727 0.655996            11.0      20.350000 optimal   52.412277
+Glucose +20%         0.035262 0.655996            12.0      18.500000 optimal   42.454257
+ Oxygen +20%         0.028473 0.655996            10.0      19.401963 optimal   15.028333
+   Both +20%         0.050105 0.655996            12.0      22.078587 optimal  102.419685
+    Scenario  Proinsulin flux  Glucose uptake  Protein per glucose  Yield change (%)
+   Reference         0.024753            10.0             0.129038          0.000000
+Glucose +10%         0.030007            11.0             0.142208         10.206480
+ Oxygen +10%         0.028473            10.0             0.148430         15.028333
+   Both +10%         0.037727            11.0             0.178790         38.556616
+Glucose +20%         0.035262            12.0             0.153183         18.711881
+ Oxygen +20%         0.028473            10.0             0.148430         15.028333
+   Both +20%         0.050105            12.0             0.217665         68.683071
+
+HIGHEST MODEL-DERIVED GLUCOSE YIELD:
+Scenario: Both +20%
+g proinsulin/g glucose: 0.21766454487049208
+Yield improvement: 68.68307106618762 %
+REFERENCE PROINSULIN: 0.024752978124692813
+REQUIRED GROWTH: 0.6559959324744383
+
+===== UPTAKE BOUND AUDIT =====
+    Exchange               Name    Uptake  Uptake limit  Bound used (%)
+ EX_glc__D_e D-Glucose exchange 10.000000          10.0    1.000000e+02
+     EX_o2_e        O2 exchange 18.500000          18.5    1.000000e+02
+    EX_nh4_e   Ammonia exchange  9.906033        1000.0    9.906033e-01
+     EX_pi_e Phosphate exchange  0.632409        1000.0    6.324086e-02
+    EX_so4_e   Sulfate exchange  0.313711        1000.0    3.137115e-02
+      EX_k_e        K+ exchange  0.128046        1000.0    1.280456e-02
+    EX_mg2_e        Mg exchange  0.005691        1000.0    5.690915e-04
+    EX_fe2_e      Fe2+ exchange  0.005415        1000.0    5.414802e-04
+    EX_fe3_e      Fe3+ exchange  0.005122        1000.0    5.121824e-04
+     EX_cl_e  Chloride exchange  0.003415        1000.0    3.414549e-04
+    EX_ca2_e   Calcium exchange  0.003415        1000.0    3.414549e-04
+    EX_cu2_e      Cu2+ exchange  0.000465        1000.0    4.649478e-05
+    EX_mn2_e      Mn2+ exchange  0.000454        1000.0    4.535660e-05
+    EX_zn2_e      Zinc exchange  0.000224        1000.0    2.236530e-05
+    EX_ni2_e      Ni2+ exchange  0.000212        1000.0    2.117021e-05
+EX_cobalt2_e      Co2+ exchange  0.000017        1000.0    1.650365e-06
+   EX_mobd_e Molybdate exchange  0.000005        1000.0    4.552732e-07
+
+===== +1% CONSTRAINT SENSITIVITY =====
+Released uptake bound  Reference product  Product with +1% capacity  Product change (%)
+          EX_glc__D_e           0.024753                   0.025278            2.122713
+              EX_o2_e           0.024753                   0.025525            3.118515
+
+===== BYPRODUCT RESTRICTION TESTS =====
+Byproduct  Reference secretion  Allowed fraction  Product  Change (%)
+  EX_ac_e             1.214042               0.5 0.024048   -2.849137
+  EX_ac_e             1.214042               0.0 0.023342   -5.698274
+ EX_for_e             0.151802               0.5 0.024735   -0.070933
+ EX_for_e             0.151802               0.0 0.024718   -0.141865
+
+===== FLUX VARIABILITY ANALYSIS =====
+                                                                       Name  Reference FBA flux      minimum    maximum       Range
+BIOMASS_Ec_iHK1487_core                                                                0.655996     0.655996   0.656161    0.000165
+MF_DM_PROINSULIN                Human proinsulin polypeptide (86 aa) demand            0.024753     0.024728   0.024753    0.000025
+MF_PROINSULIN_SYN        Theoretical human proinsulin polypeptide synthesis            0.024753     0.024728   0.024753    0.000025
+ATPM                                            ATP maintenance requirement            5.170000     5.170000   5.190022    0.020022
+EX_glc__D_e                                              D-Glucose exchange          -10.000000   -10.000000  -9.995289    0.004711
+EX_o2_e                                                         O2 exchange          -18.500000   -18.500000 -18.494068    0.005932
+EX_nh4_e                                                   Ammonia exchange           -9.906033    -9.915104  -9.903211    0.011893
+EX_ac_e                                                    Acetate exchange            1.214042     1.192737   1.246128    0.053391
+EX_for_e                                                   Formate exchange            0.151802     0.044798   0.215648    0.170851
+PGI                                           Glucose-6-phosphate isomerase           10.000000     9.919914  10.020022    0.100108
+PFK                                                     Phosphofructokinase            7.231048     0.000000   9.358611    9.358611
+PYK                                                         Pyruvate kinase            0.000000     0.000000   2.905720    2.905720
+PDH                                                  Pyruvate dehydrogenase            9.800043     9.739085   9.843197    0.104112
+CS                                                         Citrate synthase            6.211705     6.183027   6.229744    0.046717
+ACONTa                     Aconitase (half-reaction A, Citrate hydro-lyase)            6.211705     6.183027   6.225740    0.042713
+ICDHyr                                      Isocitrate dehydrogenase (NADP)            6.211705     6.169680   6.225740    0.056060
+AKGDH                                          2-Oxogluterate dehydrogenase            4.961813     4.920332   4.976392    0.056060
+SUCOAS                                Succinyl-CoA synthetase (ADP-forming)           -4.567936 -1000.000000  -4.526504  995.473496
+SUCDi                                Succinate dehydrogenase (irreversible)           36.999707     4.934055  37.000000   32.065945
+FUM                                                                Fumarase            5.794143     5.765862   5.832600    0.066738
+MDH                                                    Malate dehydrogenase            5.794143     5.752514   5.832600    0.080086
+G6PDH2r                                   Glucose 6-phosphate dehydrogenase            0.000000     0.000000   0.000000    0.000000
+GND                                          Phosphogluconate dehydrogenase            0.000000     0.000000   0.024026    0.024026
+PPC                                         Phosphoenolpyruvate carboxylase            2.758748     2.717888   2.797974    0.080086
+PTAr                                                  Phosphotransacetylase            0.584599     0.550194   0.616932    0.066738
+ACKr                                                         Acetate kinase           -0.584599    -0.616932  -0.550194    0.066738
+Original model and insulin_model unchanged.
+===== FBA vs pFBA =====
+Reference growth: 0.8199949155930478
+Required growth: 0.6559959324744383
+FBA product: 0.024752978124691672
+pFBA product: 0.02475297812469475
+pFBA growth: 0.6559959324744383
+
+===== FBA vs pFBA REACTION FLUXES =====
+   Reaction        FBA       pFBA  Lower bound  Upper bound                                           Gene rule
+     SUCOAS  -4.567936  -4.567936      -1000.0       1000.0                             ECD_00688 and ECD_00687
+      SUCDi   5.180681   4.962188          0.0       1000.0 ECD_00683 and ECD_00681 and ECD_00682 and ECD_00684
+        PFK   0.000000   6.514887          0.0       1000.0                              ECD_03801 or ECD_01692
+        PYK   0.000000   0.000000          0.0       1000.0                              ECD_01825 or ECD_01645
+    G6PDH2r   0.000000   0.000000      -1000.0       1000.0                                           ECD_01823
+        GND   0.000000   0.000000          0.0       1000.0                                           ECD_01931
+        PDH   9.800043   9.800043          0.0       1000.0               ECD_00115 and ECD_00114 and ECD_00113
+         CS   6.211705   6.211705          0.0       1000.0                                           ECD_00680
+        PPC   2.758748   2.758748          0.0       1000.0                                           ECD_03841
+       PTAr   0.584599   0.584599      -1000.0       1000.0                              ECD_02222 or ECD_02349
+       ACKr  -0.584599  -0.584599      -1000.0       1000.0                 ECD_01820 or ECD_02221 or ECD_02982
+EX_glc__D_e -10.000000 -10.000000        -10.0       1000.0                                              (none)
+    EX_o2_e -18.500000 -18.500000        -18.5       1000.0                                              (none)
+
+===== FLUX VARIABILITY COMPARISON =====
+         Ordinary min  Ordinary max  pFBA-restricted min  pFBA-restricted max
+SUCOAS   -1000.000000     -4.526504           -16.447158            -4.526504
+SUCDi        4.934055     37.000000             4.934055            22.899703
+PFK          0.000000      9.358611             0.000000             9.358611
+PYK          0.000000      2.905720             0.000000             2.905720
+G6PDH2r      0.000000      0.000000             0.000000             0.000000
+GND          0.000000      0.024026             0.000000             0.024026
+
+===== CLOSED-MEDIUM ATP AUDIT =====
+Solver status: optimal
+Maximum ATPM flux: 0.0
+No ATP-generating cycle detected under these test conditions.
+
+===== SINGLE-GENE KNOCKOUT SCREEN =====
+  Gene ID Gene name Linked reactions  Max KO growth  KO product  Product loss (%)  Status
+ECD_00684     b0724            SUCDi       0.744549    0.012848      4.809417e+01 optimal
+ECD_00683     b0723            SUCDi       0.744549    0.012848      4.809417e+01 optimal
+ECD_00682     b0722            SUCDi       0.744549    0.012848      4.809417e+01 optimal
+ECD_00681     b0721            SUCDi       0.744549    0.012848      4.809417e+01 optimal
+ECD_00115     b0116              PDH       0.755082    0.015452      3.757596e+01 optimal
+ECD_00114     b0115              PDH       0.790685    0.020366      1.772421e+01 optimal
+ECD_00113     b0114              PDH       0.790685    0.020366      1.772421e+01 optimal
+ECD_00688     b0729           SUCOAS       0.803391    0.022024      1.102532e+01 optimal
+ECD_00687     b0728           SUCOAS       0.803391    0.022024      1.102532e+01 optimal
+ECD_03841     b3956              PPC       0.810139    0.023082      6.751716e+00 optimal
+ECD_01692     b1723              PFK       0.819995    0.024753      6.550316e-13 optimal
+ECD_01823     b1852          G6PDH2r       0.819995    0.024753      6.550316e-13 optimal
+ECD_01931     b2029              GND       0.819995    0.024753     -1.998401e-13 optimal
+ECD_02982     b3115             ACKr       0.819995    0.024753     -1.998401e-13 optimal
+ECD_02222     b2297             PTAr       0.819995    0.024753     -1.998401e-13 optimal
+ECD_01820     b1849             ACKr       0.819995    0.024753     -3.930190e-12 optimal
+ECD_02349     b2458             PTAr       0.819995    0.024753     -5.528911e-12 optimal
+ECD_03801     b3916              PFK       0.819995    0.024753     -5.528911e-12 optimal
+ECD_02221     b2296             ACKr       0.819995    0.024753     -5.528911e-12 optimal
+ECD_01645     b1676              PYK       0.819995    0.024753     -8.970602e-12 optimal
+ECD_01825     b1854              PYK       0.819995    0.024753     -1.019185e-11 optimal
+
+GENES TESTED: 21
+GENES KEEPING REQUIRED GROWTH: 21
+Reference models preserved.
+===== NUTRIENT OPTIMIZATION GRID =====
+ Glucose factor  Oxygen factor Growth policy  Scenario max growth  Required growth  Product    Yield  Status
+            1.0            1.0         Fixed             0.819995         0.655996 0.024753 0.129038 optimal
+            1.0            1.0      Adaptive             0.819995         0.655996 0.024753 0.129038 optimal
+            1.0            1.1         Fixed             0.871313         0.655996 0.028473 0.148430 optimal
+            1.0            1.1      Adaptive             0.871313         0.697050 0.023629 0.123177 optimal
+            1.0            1.2         Fixed             0.896885         0.655996 0.028473 0.148430 optimal
+            1.0            1.2      Adaptive             0.896885         0.717508 0.021215 0.110593 optimal
+            1.1            1.0         Fixed             0.854926         0.655996 0.030007 0.142208 optimal
+            1.1            1.0      Adaptive             0.854926         0.683941 0.025807 0.122304 optimal
+            1.1            1.1         Fixed             0.906244         0.655996 0.037727 0.178790 optimal
+            1.1            1.1      Adaptive             0.906244         0.724995 0.027357 0.129645 optimal
+            1.1            1.2         Fixed             0.957561         0.655996 0.039289 0.186194 optimal
+            1.1            1.2      Adaptive             0.957561         0.766049 0.026303 0.124653 optimal
+            1.2            1.0         Fixed             0.889857         0.655996 0.035262 0.153183 optimal
+            1.2            1.0      Adaptive             0.889857         0.711886 0.026862 0.116693 optimal
+            1.2            1.1         Fixed             0.941175         0.655996 0.042981 0.186717 optimal
+            1.2            1.1      Adaptive             0.941175         0.752940 0.028411 0.123422 optimal
+            1.2            1.2         Fixed             0.992492         0.655996 0.050105 0.217665 optimal
+            1.2            1.2      Adaptive             0.992492         0.793994 0.029960 0.130152 optimal
+
+===== BEST OPERATING CONDITIONS =====
+
+GROWTH POLICY: Fixed
+Highest proinsulin flux: 0.050104900417283646
+Glucose multiplier: 1.2
+Oxygen multiplier: 1.2
+Actual growth: 0.6559959324744449
+Highest observed glucose-normalized yield: 0.217664544870477
+Yield scenario: 1.2 1.2
+
+GROWTH POLICY: Adaptive
+Highest proinsulin flux: 0.029960116004179933
+Glucose multiplier: 1.2
+Oxygen multiplier: 1.2
+Actual growth: 0.7939939241331285
+Highest observed glucose-normalized yield: 0.130152040219743
+Yield scenario: 1.2 1.2
+
+===== TRANSLATION ENERGY SENSITIVITY =====
+ Energy per AA  Glucose factor  Oxygen factor Growth policy  Product    Yield  Status
+             3             1.0            1.0         Fixed 0.027698 0.144390 optimal
+             3             1.0            1.0      Adaptive 0.027698 0.144390 optimal
+             3             1.2            1.2         Fixed 0.052082 0.226255 optimal
+             3             1.2            1.2      Adaptive 0.033525 0.145637 optimal
+             4             1.0            1.0         Fixed 0.024753 0.129038 optimal
+             4             1.0            1.0      Adaptive 0.024753 0.129038 optimal
+             4             1.2            1.2         Fixed 0.050105 0.217665 optimal
+             4             1.2            1.2      Adaptive 0.029960 0.130152 optimal
+             5             1.0            1.0         Fixed 0.022374 0.116636 optimal
+             5             1.0            1.0      Adaptive 0.022374 0.116636 optimal
+             5             1.2            1.2         Fixed 0.045828 0.199083 optimal
+             5             1.2            1.2      Adaptive 0.027081 0.117644 optimal
+             6             1.0            1.0         Fixed 0.020412 0.106410 optimal
+             6             1.0            1.0      Adaptive 0.020412 0.106410 optimal
+             6             1.2            1.2         Fixed 0.041810 0.181628 optimal
+             6             1.2            1.2      Adaptive 0.024706 0.107329 optimal
+
+===== REFERENCE CONSISTENCY =====
+Recalculated product: 0.024752978124691682
+Previous expected: 0.02475297812469
+REFERENCE REPRODUCED
+Original models preserved.
+No genetic improvements claimed.
+===== FSEOF SCENARIO SUMMARY =====
+ Scenario  Max growth  Required growth  Max product  Candidates
+Reference    0.819995         0.655996     0.024753          84
+Both +20%    0.992492         0.793994     0.029960          86
+
+===== GROWTH vs ENFORCED PROINSULIN =====
+ Scenario  Target fraction  Enforced proinsulin  Predicted growth
+Reference             0.00             0.000000          0.819995
+Reference             0.20             0.004951          0.787427
+Reference             0.40             0.009901          0.754815
+Reference             0.60             0.014852          0.721875
+Reference             0.80             0.019802          0.688936
+Reference             0.95             0.023515          0.664231
+Both +20%             0.00             0.000000          0.992492
+Both +20%             0.20             0.005992          0.953073
+Both +20%             0.40             0.011984          0.913601
+Both +20%             0.60             0.017976          0.873732
+Both +20%             0.80             0.023968          0.833863
+Both +20%             0.95             0.028462          0.803961
+
+===== TOP CANDIDATES: REFERENCE =====
+Reaction                                                Reaction name Direction  Magnitude increase  Correlation                                                                       Genes
+  H2Otex     H2O transport via diffusion (extracellular to periplasm)   Reverse            2.238630     0.999850 ECD_00238,ECD_00933,ECD_00961,ECD_01296,ECD_01348,ECD_02142,ECD_03760,s0001
+  H2Otpp                      H2O transport via diffusion (periplasm)   Reverse            2.238630     0.999850                                                             ECD_00880,s0001
+  THD2pp                          NAD(P) transhydrogenase (periplasm)   Forward            1.105483     0.999897                                                         ECD_01571,ECD_01572
+  NH4tex Ammonia transport via diffusion (extracellular to periplasm)   Forward            0.998629     0.999990                                     ECD_00238,ECD_00933,ECD_01348,ECD_02142
+  NH4tpp                     Ammonia reversible transport (periplasm)   Forward            0.998629     0.999990                                                             ECD_00403,s0001
+   GLUDy                               Glutamate dehydrogenase (NADP)   Reverse            0.982705     0.999719                                               ECD_01730,ECD_03077,ECD_03078
+  ICDHyr                              Isocitrate dehydrogenase (NADP)   Forward            0.723526     0.999735                                                                   ECD_01134
+  ACONTa             Aconitase (half-reaction A, Citrate hydro-lyase)   Forward            0.723526     0.999735                                                         ECD_00117,ECD_01253
+      CS                                             Citrate synthase   Forward            0.723526     0.999735                                                                   ECD_00680
+  ACONTb          Aconitase (half-reaction B, Isocitrate hydro-lyase)   Forward            0.723526     0.999735                                                         ECD_00117,ECD_01253
+  SUCOAS                        Succinyl-CoA synthetase (ADP-forming)   Reverse            0.408406     0.999229                                                         ECD_00687,ECD_00688
+   AKGDH                                 2-Oxogluterate dehydrogenase   Forward            0.373666     0.999053                                               ECD_00115,ECD_00685,ECD_00686
+   SUCDi                       Succinate dehydrogenase (irreversible)   Forward            0.373577     0.999053                                     ECD_00681,ECD_00682,ECD_00683,ECD_00684
+     FUM                                                     Fumarase   Forward            0.352389     0.998877                                               ECD_01580,ECD_01581,ECD_03993
+     MDH                                         Malate dehydrogenase   Forward            0.352389     0.998877                                                                   ECD_03096
+
+===== TOP CANDIDATES: BOTH +20% =====
+Reaction                                                Reaction name Direction  Magnitude increase  Correlation                                                                       Genes
+  H2Otpp                      H2O transport via diffusion (periplasm)   Reverse            2.709557     0.999850                                                             ECD_00880,s0001
+  H2Otex     H2O transport via diffusion (extracellular to periplasm)   Reverse            2.709557     0.999850 ECD_00238,ECD_00933,ECD_00961,ECD_01296,ECD_01348,ECD_02142,ECD_03760,s0001
+  THD2pp                          NAD(P) transhydrogenase (periplasm)   Forward            1.338036     0.999897                                                         ECD_01571,ECD_01572
+  NH4tpp                     Ammonia reversible transport (periplasm)   Forward            1.208705     0.999990                                                             ECD_00403,s0001
+  NH4tex Ammonia transport via diffusion (extracellular to periplasm)   Forward            1.208705     0.999990                                     ECD_00238,ECD_00933,ECD_01348,ECD_02142
+   GLUDy                               Glutamate dehydrogenase (NADP)   Reverse            1.189431     0.999719                                               ECD_01730,ECD_03077,ECD_03078
+  ICDHyr                              Isocitrate dehydrogenase (NADP)   Forward            0.875730     0.999735                                                                   ECD_01134
+      CS                                             Citrate synthase   Forward            0.875730     0.999735                                                                   ECD_00680
+  ACONTa             Aconitase (half-reaction A, Citrate hydro-lyase)   Forward            0.875730     0.999735                                                         ECD_00117,ECD_01253
+  ACONTb          Aconitase (half-reaction B, Isocitrate hydro-lyase)   Forward            0.875730     0.999735                                                         ECD_00117,ECD_01253
+  SUCOAS                        Succinyl-CoA synthetase (ADP-forming)   Reverse            0.494319     0.999229                                                         ECD_00687,ECD_00688
+   AKGDH                                 2-Oxogluterate dehydrogenase   Forward            0.452273     0.999053                                               ECD_00115,ECD_00685,ECD_00686
+   SUCDi                       Succinate dehydrogenase (irreversible)   Forward            0.452165     0.999053                                     ECD_00681,ECD_00682,ECD_00683,ECD_00684
+     MDH                                         Malate dehydrogenase   Forward            0.426519     0.998877                                                                   ECD_03096
+     FUM                                                     Fumarase   Forward            0.426519     0.998877                                               ECD_01580,ECD_01581,ECD_03993
+
+===== CANDIDATES SHARED ACROSS CONDITIONS =====
+Reaction Direction  Conservative delta                                                                   Genes_ref                                                                                          GPR_ref
+  H2Otex   Reverse            2.238630 ECD_00238,ECD_00933,ECD_00961,ECD_01296,ECD_01348,ECD_02142,ECD_03760,s0001 ECD_01348 or ECD_02142 or ECD_01296 or ECD_03760 or s0001 or ECD_00961 or ECD_00238 or ECD_00933
+  H2Otpp   Reverse            2.238630                                                             ECD_00880,s0001                                                                               s0001 or ECD_00880
+  THD2pp   Forward            1.105483                                                         ECD_01571,ECD_01572                                                                          ECD_01571 and ECD_01572
+  NH4tex   Forward            0.998629                                     ECD_00238,ECD_00933,ECD_01348,ECD_02142                                                 ECD_00238 or ECD_01348 or ECD_02142 or ECD_00933
+  NH4tpp   Forward            0.998629                                                             ECD_00403,s0001                                                                               s0001 or ECD_00403
+   GLUDy   Reverse            0.982705                                               ECD_01730,ECD_03077,ECD_03078                                                           ECD_01730 or (ECD_03078 and ECD_03077)
+  ICDHyr   Forward            0.723526                                                                   ECD_01134                                                                                        ECD_01134
+  ACONTa   Forward            0.723526                                                         ECD_00117,ECD_01253                                                                           ECD_00117 or ECD_01253
+      CS   Forward            0.723526                                                                   ECD_00680                                                                                        ECD_00680
+  ACONTb   Forward            0.723526                                                         ECD_00117,ECD_01253                                                                           ECD_00117 or ECD_01253
+  SUCOAS   Reverse            0.408406                                                         ECD_00687,ECD_00688                                                                          ECD_00688 and ECD_00687
+   AKGDH   Forward            0.373666                                               ECD_00115,ECD_00685,ECD_00686                                                            ECD_00115 and ECD_00686 and ECD_00685
+   SUCDi   Forward            0.373577                                     ECD_00681,ECD_00682,ECD_00683,ECD_00684                                              ECD_00683 and ECD_00681 and ECD_00682 and ECD_00684
+     FUM   Forward            0.352389                                               ECD_01580,ECD_01581,ECD_03993                                                              ECD_03993 or ECD_01581 or ECD_01580
+     MDH   Forward            0.352389                                                                   ECD_03096                                                                                        ECD_03096
+
+===== FVA CROSS-CHECK =====
+Reaction    Low min    Low max   High min   High max  Nonoverlap in expected direction
+  H2Otex -42.287076 -42.072758 -44.080419 -43.846750                              True
+  H2Otpp -42.342678 -42.072758 -44.112012 -43.846750                              True
+  THD2pp   5.460551   5.844012   6.355553   6.678782                              True
+  NH4tex   9.059396   9.119030   9.846698   9.890992                              True
+  NH4tpp   9.059396   9.119474   9.846698   9.893498                              True
+   GLUDy  -7.391655  -7.098326  -8.151074  -7.908833                              True
+  ICDHyr   5.415293   5.692045   6.008562   6.234654                              True
+  ACONTa   5.563392   5.692045   6.110347   6.234654                              True
+All model changes were temporary.
+Gene names are computational targets, NOT validated gains.
+===== MODEL VALIDATION =====
+Host: Escherichia coli str. B substr. BL21(DE3)
+Model: iHK1487
+Product: Human proinsulin polypeptide (86 aa)
+Product molecular weight: 9391.55414
+Product reaction balance: Balanced
+Reference max growth: 0.8199949155930439
+Required reference growth: 0.6559959324744352
+Verified reference proinsulin: 0.024752978124692314
+
+===== FINAL SCENARIO COMPARISON =====
+            Scenario  Glucose factor  Oxygen factor  Growth (1/h)  Product (mmol/gDCW/h)  Product (g/gDCW/h)  Yield (g/g glucose)  Product improvement (%)  Yield improvement (%)
+           Reference             1.0            1.0      0.655996               0.024753            0.232469             0.129038                 0.000000               0.000000
+   Best fixed growth             1.2            1.2      0.655996               0.050105            0.470563             0.217665               102.419685              68.683071
+Best adaptive growth             1.2            1.2      0.793994               0.029960            0.281372             0.130152                21.036410               0.863675
+
+===== PRIORITIZED METABOLIC CANDIDATES =====
+Reaction              Biological role Direction  Conservative delta FVA support                               Genes_ref                                             GPR_ref
+  THD2pp  NADH/NADPH transhydrogenase   Forward            1.105483   Supported                     ECD_01571,ECD_01572                             ECD_01571 and ECD_01572
+   GLUDy      Glutamate dehydrogenase   Reverse            0.982705   Supported           ECD_01730,ECD_03077,ECD_03078              ECD_01730 or (ECD_03078 and ECD_03077)
+  ICDHyr     Isocitrate dehydrogenase   Forward            0.723526   Supported                               ECD_01134                                           ECD_01134
+  ACONTa        Aconitase, first half   Forward            0.723526   Supported                     ECD_00117,ECD_01253                              ECD_00117 or ECD_01253
+      CS             Citrate synthase   Forward            0.723526  Not tested                               ECD_00680                                           ECD_00680
+  ACONTb       Aconitase, second half   Forward            0.723526  Not tested                     ECD_00117,ECD_01253                              ECD_00117 or ECD_01253
+  SUCOAS      Succinyl-CoA synthetase   Reverse            0.408406  Not tested                     ECD_00687,ECD_00688                             ECD_00688 and ECD_00687
+   AKGDH 2-Oxoglutarate dehydrogenase   Forward            0.373666  Not tested           ECD_00115,ECD_00685,ECD_00686               ECD_00115 and ECD_00686 and ECD_00685
+   SUCDi      Succinate dehydrogenase   Forward            0.373577  Not tested ECD_00681,ECD_00682,ECD_00683,ECD_00684 ECD_00683 and ECD_00681 and ECD_00682 and ECD_00684
+     FUM                     Fumarase   Forward            0.352389  Not tested           ECD_01580,ECD_01581,ECD_03993                 ECD_03993 or ECD_01581 or ECD_01580
+     MDH         Malate dehydrogenase   Forward            0.352389  Not tested                               ECD_03096                                           ECD_03096
+
+===== TRANSLATION ENERGY SENSITIVITY =====
+ Energy per AA  Glucose factor  Oxygen factor Growth policy  Product    Yield
+             3             1.0            1.0         Fixed 0.027698 0.144390
+             3             1.0            1.0      Adaptive 0.027698 0.144390
+             3             1.2            1.2         Fixed 0.052082 0.226255
+             3             1.2            1.2      Adaptive 0.033525 0.145637
+             4             1.0            1.0         Fixed 0.024753 0.129038
+             4             1.0            1.0      Adaptive 0.024753 0.129038
+             4             1.2            1.2         Fixed 0.050105 0.217665
+             4             1.2            1.2      Adaptive 0.029960 0.130152
+             5             1.0            1.0         Fixed 0.022374 0.116636
+             5             1.0            1.0      Adaptive 0.022374 0.116636
+             5             1.2            1.2         Fixed 0.045828 0.199083
+             5             1.2            1.2      Adaptive 0.027081 0.117644
+             6             1.0            1.0         Fixed 0.020412 0.106410
+             6             1.0            1.0      Adaptive 0.020412 0.106410
+             6             1.2            1.2         Fixed 0.041810 0.181628
+             6             1.2            1.2      Adaptive 0.024706 0.107329
+
+===== FINAL METAFORGE RESULTS =====
+Reference proinsulin: 0.024752978124691682
+Best fixed-growth proinsulin: 0.050104900417283646
+Best adaptive-growth proinsulin: 0.029960116004179933
+
+Fixed-growth production improvement: 102.41968527941623 %
+Adaptive-growth production improvement: 21.03640965243696 %
+
+Fixed-growth yield improvement: 68.68307106618015 %
+Adaptive-growth yield improvement: 0.863674710364104 %
+
+===== SCIENTIFIC CONCLUSIONS =====
+1. Human proinsulin synthesis is feasible in the model.
+2. Growth and precursor production compete for resources.
+3. Glucose and oxygen bounds constrain reference production.
+4. Nutrient changes can increase theoretical production.
+5. Improvements depend strongly on growth policy.
+6. Protein synthesis is sensitive to energy assumptions.
+7. FSEOF identifies candidate metabolic flux responses.
+8. No gene-overexpression yield gain has been demonstrated.
+
+===== IMPORTANT LIMITATIONS =====
+No transcription, translation-capacity or folding model.
+No experimentally measured recombinant expression rate.
+No prediction of soluble protein or mature insulin titer.
+No enzyme abundance or kinetic overexpression prediction.
+No experimental validation of candidate genetic targets.
+
+===== METAFORGE FBA WORKFLOW COMPLETE =====
+Original model objects preserved.

@@ -1,0 +1,1390 @@
+ 
+DAGK DIRECTIONALITY CORRECTION:
+DAGK160 | Before: (-1000.0, 1000.0)
+DAGK160 | After: (0, 1000.0)
+DAGK161 | Before: (-1000.0, 1000.0)
+DAGK161 | After: (0, 1000.0)
+DAGK180 | Before: (-1000.0, 1000.0)
+DAGK180 | After: (0, 1000.0)
+DAGK181 | Before: (-1000.0, 1000.0)
+DAGK181 | After: (0, 1000.0)
+DAGK_OLE_OLE_c | Before: (-1000.0, 1000.0)
+DAGK_OLE_OLE_c | After: (0, 1000.0)
+DAGK_LNA_LNA_c | Before: (-1000.0, 1000.0)
+DAGK_LNA_LNA_c | After: (0, 1000.0)
+DAGK184_6_9_12_15 | Before: (-1000.0, 1000.0)
+DAGK184_6_9_12_15 | After: (0, 1000.0)
+DAGK183_9_12_15 | Before: (-1000.0, 1000.0)
+DAGK183_9_12_15 | After: (0, 1000.0)
+DAGK183_6_9_12 | Before: (-1000.0, 1000.0)
+DAGK183_6_9_12 | After: (0, 1000.0)
+OBSERVATIONS FROM LIGHT VARIATIONS:
+
+LIGHT: 27.5 µmol/m²/s
+Absorbed photons: 21.364200000000004
+Usable photons: 18.114072597700563
+ATP cost: 2.9954940000000003
+Growth: 0.026395767524675394
+Actual photon flux: -18.114072597700563
+
+LIGHT: 50 µmol/m²/s
+Absorbed photons: 31.8942
+Usable photons: 25.155913746437896
+ATP cost: 3.732594
+Growth: 0.03755741214965074
+Actual photon flux: -25.155913746437896
+
+LIGHT: 100 µmol/m²/s
+Absorbed photons: 55.294200000000004
+Usable photons: 37.759358824804636
+ATP cost: 5.3705940000000005
+Growth: 0.05686303712190109
+Actual photon flux: -37.759358824804636
+
+LIGHT: 200 µmol/m²/s
+Absorbed photons: 102.0942
+Usable photons: 54.96529905834669
+ATP cost: 8.646594
+Growth: 0.08102826115681673
+Actual photon flux: -54.96529905834669
+
+LIGHT: 400 µmol/m²/s
+Absorbed photons: 195.6942
+Usable photons: 74.02782271300231
+ATP cost: 15.198594000000002
+Growth: 0.10164484920547336
+Actual photon flux: -74.02782271300231
+
+LIGHT: 660 µmol/m²/s
+Absorbed photons: 317.3742
+Usable photons: 86.58551538547195
+ATP cost: 23.716194
+Growth: 0.10637625052728819
+Actual photon flux: -86.58551538547195
+
+LIGHT: 800 µmol/m²/s
+Absorbed photons: 382.8942
+Usable photons: 90.82562540117404
+ATP cost: 28.302594000000003
+Growth: 0.10437085661222514
+Actual photon flux: -90.82562540117404
+
+LIGHT: 1100 µmol/m²/s
+Absorbed photons: 523.2942000000002
+Usable photons: 96.99893050391039
+ATP cost: 38.130594000000016
+Growth: 0.09481469036304309
+Actual photon flux: -96.99893050391039
+
+WT REFERENCE CONDITION:
+Light: 400 µmol/m²/s
+Absorbed photons: 195.6942
+Usable photons: 74.02782271300231
+ATP maintenance cost: 15.198594000000002
+Growth: 0.10164484920547336
+Actual photon flux: -74.02782271300231
+ATPM flux: 15.198594000000002
+
+WT CARBON STORAGE/LIPID RELATED REACTIONS:
+PHBS_syn_1 |  | Flux: 0.0
+SK_glycogenN_c | Glycogen granule sink | Flux: -0.021957143989854485
+BM0010 | Glycogen component of biomass reaction | Flux: 0.003560149540699432
+GGGT_PALM_PALM_4_c | Galactolipid galactosyltransferase(16:0/16:0) | Flux: 0.002169812080025605
+
+REACTION: SK_glycogenN_c
+Name: Glycogen granule sink
+Equation: glycogenN_c <=> 
+Bounds: (-1000.0, 1000.0)
+Genes: 
+pFBA flux: -0.021957143989854485
+
+REACTION: BM0010
+Name: Glycogen component of biomass reaction
+Equation: 6.1674780058651 glycogen_c --> 0.985 bm_glycogen_c
+Bounds: (0.0, 1000.0)
+Genes: 
+pFBA flux: 0.003560149540699432
+
+REACTION: PHBS_syn_1
+Name: 
+Equation: 3hbcoa__R_c <=> coa_c + phb_c
+Bounds: (-1000.0, 1000.0)
+Genes: slr1829 and slr1830
+pFBA flux: 0.0
+
+REACTION: GGGT_PALM_PALM_4_c
+Name: Galactolipid galactosyltransferase(16:0/16:0)
+Equation: 2.0 mgdg160_c --> 12dgr160_c + dgdg160_c
+Bounds: (0.0, 1000.0)
+Genes: slr1508
+pFBA flux: 0.002169812080025605
+
+METABOLITE: glycogen_c | Glycogen
+BM0010 | Glycogen component of biomass reaction | 6.1674780058651 glycogen_c --> 0.985 bm_glycogen_c | Flux: 0.003560149540699432
+ST0005 |  | glycogen_c + pi_c --> g1p_c + glycogenN_c | Flux: 0.0
+ST0003 |  | amylose_c + glycogenN_c --> glycogen_c | Flux: 0.021957143989854485
+ST0006 |  | glycogen_c + h2o_c --> glc__D_c + glycogenN_c | Flux: 0.0
+
+METABOLITE: glycogenN_c | Glycogen granule
+ST0005 |  | glycogen_c + pi_c --> g1p_c + glycogenN_c | Flux: 0.0
+ST0003 |  | amylose_c + glycogenN_c --> glycogen_c | Flux: 0.021957143989854485
+ST0006 |  | glycogen_c + h2o_c --> glc__D_c + glycogenN_c | Flux: 0.0
+SK_glycogenN_c | Glycogen granule sink | glycogenN_c <=>  | Flux: -0.021957143989854485
+
+METABOLITE: bm_glycogen_c | Glycogen component of biomass
+BM0009 |  | 53.35 atp_c + 0.0597 bm_cw_c + 0.0314 bm_dna_c + 0.0345 bm_glycogen_c + 0.0101 bm_ion_c + 0.1215 bm_memlip_c + 0.0247 bm_pigm_c + 0.5165 bm_pro_c + 0.1722 bm_rna_c + 0.0294 bm_sol_c + 53.35 h2o_c --> 53.35 adp_c + biomass_e + 53.35 h_c + 53.35 pi_c | Flux: 0.10164484920547652
+BM0010 | Glycogen component of biomass reaction | 6.1674780058651 glycogen_c --> 0.985 bm_glycogen_c | Flux: 0.003560149540699432
+
+REACTIONS CONNECTED TO AMYLOSE:
+
+REACTION: ST0004
+Name: 
+Equation: amylose_c + pi_c --> g1p_c
+Genes: sll1356 or slr1367
+Bounds: (0.0, 1000.0)
+pFBA flux: 0.0
+
+REACTION: AMYLS
+Name: 
+Equation: adpglc_c --> adp_c + amylose_c + h_c
+Genes: sll1393 or sll0945
+Bounds: (0.0, 1000.0)
+pFBA flux: 0.021957143989854485
+
+REACTION: ST0003
+Name: 
+Equation: amylose_c + glycogenN_c --> glycogen_c
+Genes: sll0158 or sll0735
+Bounds: (0.0, 1000.0)
+pFBA flux: 0.021957143989854485
+
+REACTION: ST0003
+Name: 
+Equation: amylose_c + glycogenN_c --> glycogen_c
+Genes: sll0158 or sll0735
+Bounds: (0.0, 1000.0)
+pFBA flux: 0.021957143989854485
+
+REACTION: ST0005
+Name: 
+Equation: glycogen_c + pi_c --> g1p_c + glycogenN_c
+Genes: sll1356 or slr1367
+Bounds: (0.0, 1000.0)
+pFBA flux: 0.0
+
+REACTION: ST0006
+Name: 
+Equation: glycogen_c + h2o_c --> glc__D_c + glycogenN_c
+Genes: slr1857 or slr0237
+Bounds: (0.0, 1000.0)
+pFBA flux: 0.0
+
+REACTIONS CONNECTED TO ADP-GLUCOSE:
+
+REACTION: AMYLS
+Name: 
+Equation: adpglc_c --> adp_c + amylose_c + h_c
+Genes: sll1393 or sll0945
+Bounds: (0.0, 1000.0)
+pFBA flux: 0.021957143989854485
+
+REACTION: GGPS
+Name: 
+Equation: adpglc_c + glyc3p_c --> adp_c + glcglycp_c + h_c
+Genes: sll1566
+Bounds: (0.0, 1000.0)
+pFBA flux: 0.0
+
+REACTION: SS0016
+Name: 
+Equation: adpglc_c + glyc_c <-- adp_c + glcglyc_c + h_c
+Genes: slr1670
+Bounds: (-1000.0, 0.0)
+pFBA flux: 0.0
+
+REACTION: GLGC
+Name: 
+Equation: atp_c + g1p_c + h_c --> adpglc_c + ppi_c
+Genes: slr1176
+Bounds: (0.0, 1000.0)
+pFBA flux: 0.021957143989854485
+
+REACTION: GLGC
+Name: 
+Equation: atp_c + g1p_c + h_c --> adpglc_c + ppi_c
+Genes: slr1176
+Bounds: (0.0, 1000.0)
+pFBA flux: 0.021957143989854485
+
+BIOMASS RELATED REACTIONS:
+
+REACTION: BM0001
+Name: 
+Equation: 0.766 ala__L_c + 0.455 arg__L_c + 0.366 asn__L_c + 0.454 asp__L_c + 0.09 cys__L_c + 0.502 gln__L_c + 0.546 glu__L_c + 0.666 gly_c + 0.168 his__L_c + 0.566 ile__L_c + 1.029 leu__L_c + 0.378 lys__L_c + 0.177 met__L_c + 0.362 phe__L_c + 0.463 pro__L_c + 0.524 ser__L_c + 0.496 thr__L_c + 0.14 trp__L_c + 0.263 tyr__L_c + 0.608 val__L_c --> 0.985 bm_pro_c + 9.0197 h2o_c
+Bounds: (0.0, 1000.0)
+Genes: 
+pFBA flux: 0.053299050370181345
+
+REACTION: BM0002
+Name: 
+Equation: 0.8487 datp_c + 0.7749 dctp_c + 0.7772 dgtp_c + 0.8517 dttp_c --> 0.985 bm_dna_c + 3.2525 ppi_c
+Bounds: (0.0, 1000.0)
+Genes: 
+pFBA flux: 0.0032402520457380335
+
+REACTION: BM0003
+Name: 
+Equation: 0.73 atp_c + 0.7799 ctp_c + 0.808 gtp_c + 0.8012 utp_c --> 0.985 bm_rna_c + 3.1191 ppi_c
+Bounds: (0.0, 1000.0)
+Genes: 
+pFBA flux: 0.017769789881404117
+
+REACTION: BM0004
+Name: 
+Equation: 0.4276 PG_p + 0.4276 lipidAds_c --> 0.985 bm_cw_c
+Bounds: (0.0, 1000.0)
+Genes: 
+pFBA flux: 0.006160606596514668
+
+REACTION: BM0005
+Name: 
+Equation: 0.17306 dgdg160_c + 0.01278 dgdg161_c + 0.00296 dgdg180_c + 0.00387 dgdg181_9_c + 0.00387 dgdg181_c + 0.04418 dgdg182_9_12_c + 0.0961 dgdg183_6_9_12_c + 0.00126 dgdg183_9_12_15_c + 0.00521 dgdg184_6_9_12_15_c + 0.25274 mgdg160_c + 0.01471 mgdg161_c + 0.00065 mgdg180_c + 0.00603 mgdg181_9_c + 0.00603 mgdg181_c + 0.08048 mgdg182_9_12_c + 0.11998 mgdg183_6_9_12_c + 0.0006 mgdg183_9_12_15_c + 0.00362 mgdg184_6_9_12_15_c + 0.06664 pg160_c + 0.00114 pg161_c + 0.00228 pg180_c + 0.00425 pg181_9_c + 0.00425 pg181_c + 0.04319 pg182_9_12_c + 0.01079 pg183_9_12_15_c + 0.19906 sqdg160_c + 0.023 sqdg161_c + 0.00437 sqdg180_c + 0.02557 sqdg181_9_c + 0.02557 sqdg181_c + 0.06797 sqdg182_9_12_c + 0.00291 sqdg183_6_9_12_c + 0.0021 sqdg183_9_12_15_c --> 0.985 bm_memlip_c
+Bounds: (0.0, 1000.0)
+Genes: 
+pFBA flux: 0.012537917947680605
+
+REACTION: BM0006
+Name: 
+Equation: 0.008 10fthf_c + 0.008 5mthf_c + 0.01 accoa_c + 0.008 adocbl_c + 0.008 amet_c + 0.008 chor_c + 0.006 coa_c + 0.002 dtpcudcpp_c + 0.008 fad_c + 0.008 gthrd_c + 0.008 hemeA_c + 0.008 hemeO_c + 0.001 malcoa_c + 0.008 methf_c + 0.062 nad_c + 0.002 nadh_c + 0.004 nadp_c + 0.012 nadph_c + 0.008 pheme_c + 1.147 ptrc_c + 0.008 pydx5p_c + 0.008 ribflv_c + 0.233 spmd_c + 0.003 succoa_c + 0.008 thf_c + 0.008 thmpp_c --> 0.985 bm_sol_c
+Bounds: (0.0, 1000.0)
+Genes: 
+pFBA flux: 0.003033866565117776
+
+REACTION: BM0007
+Name: 
+Equation: 0.454 ca2_c + 0.303 cobalt2_c + 0.303 cu2_c + 0.682 fe2_c + 0.682 fe3_c + 17.04 k_c + 0.757 mg2_c + 0.303 mn2_c + 0.303 mobd_c + 0.379 na1_c + 1.136 nh4_c + 0.379 pi_c + 0.379 so4_c + 0.303 zn2_c --> 0.985 bm_ion_c
+Bounds: (0.0, 1000.0)
+Genes: 
+pFBA flux: 0.0010422466771322972
+
+REACTION: BM0008
+Name: 
+Equation: 0.01 avite1_c + 0.001 bvite_c + 0.134 caro_c + 0.827 cholphya_c + 0.009 dtocophe_c + 0.098 echin_c + 0.063 gcarote_c + 0.001 gtocophe_c + 0.067 phllqne_c + 0.113 zeax_c --> 0.985 bm_pigm_c
+Bounds: (0.0, 1000.0)
+Genes: 
+pFBA flux: 0.0025488606856601728
+
+REACTION: BM0009
+Name: 
+Equation: 53.35 atp_c + 0.0597 bm_cw_c + 0.0314 bm_dna_c + 0.0345 bm_glycogen_c + 0.0101 bm_ion_c + 0.1215 bm_memlip_c + 0.0247 bm_pigm_c + 0.5165 bm_pro_c + 0.1722 bm_rna_c + 0.0294 bm_sol_c + 53.35 h2o_c --> 53.35 adp_c + biomass_e + 53.35 h_c + 53.35 pi_c
+Bounds: (0.0, 1000.0)
+Genes: 
+pFBA flux: 0.10164484920547652
+
+REACTION: EX_biomass_e
+Name: Biomass exchange
+Equation: biomass_e <=> 
+Bounds: (-1000.0, 1000.0)
+Genes: 
+pFBA flux: 0.10164484920547653
+
+REACTION: BM0010
+Name: Glycogen component of biomass reaction
+Equation: 6.1674780058651 glycogen_c --> 0.985 bm_glycogen_c
+Bounds: (0.0, 1000.0)
+Genes: 
+pFBA flux: 0.003560149540699432
+cbm_c | Carbamate
+bm_pro_c | Protein component of biomass
+bm_dna_c | DNA component of biomass
+bm_rna_c | RNA component of biomass
+bm_cw_c | Cell wall component of biomass
+bm_memlip_c | Lipid component of biomass
+bm_sol_c | Soluble pool component of biomass
+bm_ion_c | Ion component of biomass
+bm_pigm_c | Pigment component of biomass
+biomass_e | Biomass
+bm_glycogen_c | Glycogen component of biomass
+
+DIRECT GLGC KNOCKOUT WITH WT BIOMASS:
+Status: optimal
+Growth: -1.458271892538766e-16
+
+WT glycogen biomass fraction: 0.0345
+Remaining biomass scaling factor: 1.0357327809425168
+
+MODIFIED BIOMASS REACTION:
+53.35 atp_c + 0.06183324702226825 bm_cw_c + 0.032522009321595026 bm_dna_c + 0.010460901087519419 bm_ion_c + 0.12584153288451577 bm_memlip_c + 0.025582599689280165 bm_pigm_c + 0.5349559813568099 bm_pro_c + 0.17835318487830137 bm_rna_c + 0.030450543759709993 bm_sol_c + 53.35 h2o_c --> 53.35 adp_c + biomass_e + 53.35 h_c + 53.35 pi_c
+
+Sum of remaining biomass fractions: 0.9999999999999998
+GLGC bounds: (0, 0)
+
+GLGC MUTANT:
+Status: optimal
+Growth: 0.10052749975127177
+Photon flux: -74.0278227130023
+ATPM flux: 15.198594
+GLGC flux: 0.0
+AMYLS flux: 0.0
+ST0003 flux: 0.0
+BM0010 flux: 0.0
+PHB synthesis flux: 0.0
+
+WT VS GLGC MUTANT:
+EX_photon_e1_e | WT: -74.02782271300231 | MUTANT: -74.0278227130023
+ATPM | WT: 15.198594000000002 | MUTANT: 15.198594
+GLGC | WT: 0.021957143989854485 | MUTANT: 0.0
+AMYLS | WT: 0.021957143989854485 | MUTANT: 0.0
+ST0003 | WT: 0.021957143989854485 | MUTANT: 0.0
+BM0010 | WT: 0.003560149540699432 | MUTANT: 0.0
+PHBS_syn_1 | WT: 0.0 | MUTANT: 0.0
+
+GROWTH:
+WT: 0.10164484920547336
+GLGC mutant: 0.10052749975127177
+Growth change: -1.0992681507578261 %
+
+LARGEST INTERNAL FLUX CHANGES:
+PR0035 |  | WT: 8.235615038141436 | MUTANT: 8.097234743220158 | CHANGE: -0.13838029492127824
+PR0002 |  | WT: 26.479972876316783 | MUTANT: 26.584886941251963 | CHANGE: 0.10491406493517985
+PR0003 |  | WT: 47.54784983668553 | MUTANT: 47.44293577175035 | CHANGE: -0.10491406493517985
+PR0028 |  | WT: 47.547849836685536 | MUTANT: 47.442935771750356 | CHANGE: -0.10491406493517985
+PR0036 |  | WT: 26.479972876316786 | MUTANT: 26.584886941251963 | CHANGE: 0.1049140649351763
+PR0029 |  | WT: 47.54784983668552 | MUTANT: 47.44293577175037 | CHANGE: -0.10491406493515143
+PR0018 |  | WT: 47.547849836683774 | MUTANT: 47.44293577175033 | CHANGE: -0.10491406493344613
+PR0016 |  | WT: 47.54784983668377 | MUTANT: 47.44293577175036 | CHANGE: -0.1049140649334035
+PR0017 |  | WT: 47.54784983668377 | MUTANT: 47.44293577175037 | CHANGE: -0.10491406493339639
+PGK |  | WT: 8.040837277370565 | MUTANT: 7.966709063631608 | CHANGE: -0.07412821373895717
+GAPDi_nadp |  | WT: -8.040837277370565 | MUTANT: -7.966709063631609 | CHANGE: 0.07412821373895628
+3PGtcx |  | WT: 8.825538898990628 | MUTANT: 8.770516051322042 | CHANGE: -0.05502284766858523
+PR0037 |  | WT: 13.239986438158388 | MUTANT: 13.292443470625987 | CHANGE: 0.05245703246759881
+PR0038 |  | WT: 13.239986438158388 | MUTANT: 13.292443470625987 | CHANGE: 0.05245703246759881
+H2Otu_syn |  | WT: 13.239986438158393 | MUTANT: 13.292443470625985 | CHANGE: 0.0524570324675917
+PR0021 |  | WT: 23.7739249183419 | MUTANT: 23.721467885875175 | CHANGE: -0.052457032466726616
+PR0020 |  | WT: 23.77392491834191 | MUTANT: 23.721467885875185 | CHANGE: -0.052457032466723064
+PR0019 |  | WT: 23.773924918341844 | MUTANT: 23.721467885875175 | CHANGE: -0.05245703246666977
+NAt3pp |  | WT: -2.828724923972796 | MUTANT: -2.7851380334698814 | CHANGE: 0.04358689050291442
+H2CO3_NAt_syn |  | WT: 2.846879818841763 | MUTANT: 2.8037349510171308 | CHANGE: -0.04314486782463245
+HCO3Ee |  | WT: 2.8468798188417623 | MUTANT: 2.8037349510171308 | CHANGE: -0.04314486782463156
+HCO3tex |  | WT: 2.8468798188417623 | MUTANT: 2.8037349510171308 | CHANGE: -0.04314486782463156
+ATPSu |  | WT: 11.68414266012756 | MUTANT: 11.646441305400437 | CHANGE: -0.03770135472712255
+PR0006 |  | WT: 2.2649661348835 | MUTANT: 2.297620204493206 | CHANGE: 0.03265406960970596
+TPI |  | WT: 3.441536439975997 | MUTANT: 3.412869855514074 | CHANGE: -0.02866658446192316
+PRUK |  | WT: 4.412769449495314 | MUTANT: 4.38525802566102 | CHANGE: -0.027511423834293502
+RB15BPtcx |  | WT: 4.412769449495314 | MUTANT: 4.385258025661021 | CHANGE: -0.027511423834292614
+GE0002 |  | WT: 4.412769449495314 | MUTANT: 4.385258025661022 | CHANGE: -0.027511423834291726
+GE0004 |  | WT: 4.412769449495314 | MUTANT: 4.385258025661022 | CHANGE: -0.027511423834291726
+HCO3tcx |  | WT: 4.412769449495314 | MUTANT: 4.385258025661022 | CHANGE: -0.027511423834291726
+EX_co2_e | CO2 exchange | WT: -4.356436570741319 | MUTANT: -4.327553593388176
+
+REACTION: PR0035
+Name: 
+Equation: 2.0 fdxrd_c + 6.0 h_c + pq_um --> 2.0 fdxo_2_2_c + 4.0 h_u + pqh2_um
+Genes: slr1281 and sll1732 and sll0520 and sll0027 and ssr1386 and slr0844 and sll0223 and sll1733 and sll1734 and sll0522 and sll0519 and slr1291 and slr0331 and sll0521 and sll0026 and slr1279 and slr0261 and slr1280 and slr1623 and sll1262 and slr2007 and slr2009 and ssl0352 and slr1302 and ssl1690 and sll8031
+WT flux: 8.235615038141436
+MUTANT flux: 8.097234743220158
+Change: -0.13838029492127824
+
+REACTION: PR0003
+Name: 
+Equation: photon_e1_um --> e700_um
+Genes: 
+WT flux: 47.54784983668553
+MUTANT flux: 47.44293577175035
+Change: -0.10491406493517985
+
+REACTION: PR0036
+Name: 
+Equation: e680_um + p680_um + qa_um --> p680p_um + qan_um
+Genes: sll0258 and sll0427 and sll0849 and sll0851 and sll1194 and sll1398 and sll1418 and sll1867 and slr0906 and slr0927 and slr1181 and slr1311 and slr1645 and slr1739 and slr2034 and sml0001 and sml0002 and sml0003 and sml0005 and sml0007 and smr0001 and smr0006 and smr0007 and smr0008 and smr0009 and ssl2598 and ssr3451 and sll0217 and sll0219 and sll1281
+WT flux: 26.479972876316786
+MUTANT flux: 26.584886941251963
+Change: 0.1049140649351763
+
+REACTION: PR0002
+Name: 
+Equation: photon_e1_um --> e680_um
+Genes: 
+WT flux: 26.479972876316783
+MUTANT flux: 26.584886941251963
+Change: 0.10491406493517985
+
+REACTION: PR0017
+Name: 
+Equation: pcox_u + rdRieskeB6_um --> oxRieskeB6_um + pcrd_u
+Genes: sll1182 and sll1316 and sll1317 and slr0342 and slr0343 and slr1185 and sml0004 and smr0003 and smr0010 and sll1796 and ssl3803
+WT flux: 47.54784983668377
+MUTANT flux: 47.44293577175037
+Change: -0.10491406493339639
+
+REACTION: PR0029
+Name: 
+Equation: p700p_um + pcrd_u --> p700_um + pcox_u
+Genes: sll0226 and sll0629 and sll0634 and sll0819 and slr0171 and slr0737 and slr0823 and slr1655 and slr1834 and slr1835 and sml0008 and smr0004 and smr0005 and ssl0563 and ssr0390 and ssr2831 and ssr2016
+WT flux: 47.54784983668552
+MUTANT flux: 47.44293577175037
+Change: -0.10491406493515143
+
+REACTION: PR0028
+Name: 
+Equation: e700_um + fdxo_2_2_c + p700_um --> fdxrd_c + p700p_um
+Genes: sll0226 and sll0629 and sll0634 and sll0819 and slr0171 and slr0737 and slr0823 and slr1655 and slr1834 and slr1835 and sml0008 and smr0004 and smr0005 and ssl0563 and ssr0390 and ssr2831 and ssr2016
+WT flux: 47.547849836685536
+MUTANT flux: 47.442935771750356
+Change: -0.10491406493517985
+
+REACTION: PR0016
+Name: 
+Equation: oxRieskeB6_um + pqh2_um --> h_u + pqhb6l_um + rdRieskeB6_um
+Genes: sll1182 and sll1316 and sll1317 and slr0342 and slr0343 and slr1185 and sml0004 and smr0003 and smr0010 and sll1796 and ssl3803
+WT flux: 47.54784983668377
+MUTANT flux: 47.44293577175036
+Change: -0.1049140649334035
+
+REACTION: PR0018
+Name: 
+Equation: hemeB3p_um + pqhb6l_um --> h_u + hemeB2p_um + pqb6s_um
+Genes: sll1182 and sll1316 and sll1317 and slr0342 and slr0343 and slr1185 and sml0004 and smr0003 and smr0010 and sll1796 and ssl3803
+WT flux: 47.547849836683774
+MUTANT flux: 47.44293577175033
+Change: -0.10491406493344613
+
+REACTION: GAPDi_nadp
+Name: 
+Equation: g3p_c + nadp_c + pi_c <-- 13dpg_c + h_c + nadph_c
+Genes: sll1342
+WT flux: -8.040837277370565
+MUTANT flux: -7.966709063631609
+Change: 0.07412821373895628
+
+REACTION: PGK
+Name: 
+Equation: 3pg_c + atp_c <=> 13dpg_c + adp_c
+Genes: slr0394
+WT flux: 8.040837277370565
+MUTANT flux: 7.966709063631608
+Change: -0.07412821373895717
+
+REACTION: ATPSu
+Name: 
+Equation: 3.0 adp_c + 14.0 h_u + 3.0 pi_c --> 3.0 atp_c + 3.0 h2o_c + 11.0 h_c
+Genes: sll1327 and sll1323 and sll1322 and ssl2615 and sll1324 and sll1325 and sll1326 and slr1329 and slr1330
+WT flux: 11.68414266012756
+MUTANT flux: 11.646441305400437
+Change: -0.03770135472712255
+
+REACTION: PRUK
+Name: 
+Equation: atp_c + ru5p__D_c --> adp_c + h_c + rb15bp_c
+Genes: sll1525
+WT flux: 4.412769449495314
+MUTANT flux: 4.38525802566102
+Change: -0.027511423834293502
+
+METABOLITE: accoa_c | Acetyl-CoA
+POR_syn |  | WT: 0.0 | MUTANT: 0.0 | CHANGE: 0.0
+PDH |  | WT: 0.0 | MUTANT: 0.0 | CHANGE: 0.0
+CS |  | WT: -0.12953900473384625 | MUTANT: -0.132692929789744 | CHANGE: -0.0031539250558977605
+IPPS |  | WT: -0.05484472283091658 | MUTANT: -0.05618004377054676 | CHANGE: -0.0013353209396301802
+ACGS |  | WT: 0.0 | MUTANT: 0.0 | CHANGE: 0.0
+ACACT1r |  | WT: 0.0 | MUTANT: 0.0 | CHANGE: 0.0
+ACCOAC |  | WT: 0.3076305374154418 | MUTANT: 0.3151205105081485 | CHANGE: 0.007489973092706714
+SERAT |  | WT: 0.0049061337296606245 | MUTANT: 0.00502558484115652 | CHANGE: 0.00011945111149589543
+ACS |  | WT: 0.5603630808116324 | MUTANT: 0.5740064090477972 | CHANGE: 0.013643328236164765
+ACOATA |  | WT: 0.043417039065394236 | MUTANT: 0.04447412675602764 | CHANGE: 0.0010570876906334029
+BM0006 |  | WT: 0.003033866565117776 | MUTANT: 0.0031077330256145353 | CHANGE: 7.386646049675934e-05
+G1PACT |  | WT: 0.010537101522678689 | MUTANT: 0.01079365149831846 | CHANGE: 0.0002565499756397721
+MMS |  | WT: 0.0 | MUTANT: 0.0 | CHANGE: 0.0
+HSERTA |  | WT: 0.009458202848043041 | MUTANT: 0.009688484553599257 | CHANGE: 0.00023028170555621646
+PTAr |  | WT: 0.0 | MUTANT: 0.0 | CHANGE: 0.0
+
+METABOLITE: malcoa_c | Malonyl-CoA
+BM0006 |  | WT: 0.003033866565117776 | MUTANT: 0.0031077330256145353 | CHANGE: 7.386646049675934e-05
+ACCOAC |  | WT: 0.3076305374154418 | MUTANT: 0.3151205105081485 | CHANGE: 0.007489973092706714
+MCOATA |  | WT: 0.3076275035488766 | MUTANT: 0.3151174027751229 | CHANGE: 0.0074898992262463215
+
+METABOLITE: 3hbcoa__R_c | (R)-3-Hydroxybutanoyl-CoA
+AACOAR_syn |  | WT: 0.0 | MUTANT: 0.0 | CHANGE: 0.0
+PHBS_syn_1 |  | WT: 0.0 | MUTANT: 0.0 | CHANGE: 0.0
+
+METABOLITE: phb_c | Poly-beta-hydroxybutyrate
+PHBS_syn_1 |  | WT: 0.0 | MUTANT: 0.0 | CHANGE: 0.0
+
+POTENTIAL TAG/DAG METABOLITES:
+12dgr160_c | 1,2-Diacyl-sn-glycerol (dihexadecanoyl, n-C16:0)
+12dgr161_c | 1,2-Diacyl-sn-glycerol (dihexadec-9-enoyl, n-C16:1)
+12dgr180_c | 1,2-Diacyl-sn-glycerol (dioctadecanoyl, n-C18:0)
+12dgr181_c | 1,2-Diacyl-sn-glycerol (dioctadec-11-enoyl, n-C18:1)
+12dgr181_9_c | 1,2-Diacyl-sn-glycerol (dioctadec-9-enoyl, n-C18 1)
+12dgr182_9_12_c | 1,2-Diacyl-sn-glycerol (dioctadec-9-12-dienoyl, n-C18 2)
+12dgr184_6_9_12_15_c | 1,2-Diacyl-sn-glycerol (dioctadec-6-9-12-15-tetraenoyl, n-C18 4)
+12dgr183_9_12_15_c | 1,2-Diacyl-sn-glycerol (dioctadec-9-12-15-trienoyl, n-C18 3)
+12dgr183_6_9_12_c | 1,2-Diacyl-sn-glycerol (dioctadec-6-9-12-trienoyl, n-C18 3)
+12mgdg160_c | 3-D-glucosyl-1,2-Diacylglycerol (n-C16::0)
+12mgdg161_c | 3-D-glucosyl-1,2-Diacylglycerol (n-C16::1)
+12mgdg180_c | 3-D-glucosyl-1,2-Diacylglycerol (n-C18::0)
+12mgdg181_c | 3-D-glucosyl-1,2-Diacylglycerol (n-C18::1)
+12mgdg181_9_c | 3-D-glucosyl-1,2-Diacylglycerol (n-C18::1:9)
+12mgdg182_9_12_c | 3-D-glucosyl-1,2-Diacylglycerol (n-C18::2)
+12mgdg184_6_9_12_15_c | 3-D-glucosyl-1,2-Diacylglycerol (n-C18::4)
+12mgdg183_9_12_15_c | 3-D-glucosyl-1,2-Diacylglycerol (n-C18::3 (9,12,15))
+12mgdg183_6_9_12_c | 3-D-glucosyl-1,2-Diacylglycerol (n-C18::3 (6,9,12))
+mgdg160_c | 1,2-Diacyl-3-beta-D-galactosyl-sn-glycerol (n-C16::0)
+mgdg161_c | 1,2-Diacyl-3-beta-D-galactosyl-sn-glycerol (n-C16::1)
+mgdg180_c | 1,2-Diacyl-3-beta-D-galactosyl-sn-glycerol (n-C18::0)
+mgdg181_c | 1,2-Diacyl-3-beta-D-galactosyl-sn-glycerol (n-C18::1)
+mgdg181_9_c | 1,2-Diacyl-3-beta-D-galactosyl-sn-glycerol (n-C18::1:9)
+mgdg182_9_12_c | 1,2-Diacyl-3-beta-D-galactosyl-sn-glycerol (n-C18::2)
+mgdg184_6_9_12_15_c | 1,2-Diacyl-3-beta-D-galactosyl-sn-glycerol (n-C18::4)
+mgdg183_9_12_15_c | 1,2-Diacyl-3-beta-D-galactosyl-sn-glycerol (n-C18::3 (9,12,15))
+mgdg183_6_9_12_c | 1,2-Diacyl-3-beta-D-galactosyl-sn-glycerol (n-C18::3 (6,9,12))
+dgdg160_c | Digalactosyl-diacylglycerol(n-C160::0)
+dgdg161_c | Digalactosyl-diacylglycerol(n-C160::1)
+dgdg180_c | Digalactosyl-diacylglycerol(n-C180::0)
+dgdg181_c | Digalactosyl-diacylglycerol(n-C180::1)
+dgdg181_9_c | Digalactosyl-diacylglycerol(n-C180::1:9)
+dgdg182_9_12_c | Digalactosyl-diacylglycerol(n-C180::2)
+dgdg184_6_9_12_15_c | Digalactosyl-diacylglycerol(n-C180::4)
+dgdg183_9_12_15_c | Digalactosyl-diacylglycerol(n-C180::3 (9,12,15))
+dgdg183_6_9_12_c | Digalactosyl-diacylglycerol(n-C180::3 (6,9,12))
+sqdg160_c | Sulfoquinovosyldiacylglycerol (n-C16::0)
+sqdg161_c | Sulfoquinovosyldiacylglycerol (n-C16::1)
+sqdg180_c | Sulfoquinovosyldiacylglycerol (n-C18::0)
+sqdg181_c | Sulfoquinovosyldiacylglycerol (n-C18::1)
+sqdg181_9_c | Sulfoquinovosyldiacylglycerol (n-C18::1:9)
+sqdg182_9_12_c | Sulfoquinovosyldiacylglycerol (n-C18::2)
+sqdg184_6_9_12_15_c | Sulfoquinovosyldiacylglycerol (n-C18::4)
+sqdg183_9_12_15_c | Sulfoquinovosyldiacylglycerol (n-C18::3 (9,12,15))
+sqdg183_6_9_12_c | Sulfoquinovosyldiacylglycerol (n-C18::3 (6,9,12))
+
+POTENTIAL TAG/DAG REACTIONS:
+
+REACTION: PAPA160
+Name: Phosphatidate phosphatase (n-C16:0)
+Equation: h2o_c + pa160_c --> 12dgr160_c + pi_c
+Genes: sll0545
+WT flux: 0.007834443408787702
+MUTANT flux: 0.008025190955572725
+
+REACTION: PAPA161
+Name: Phosphatidate phosphatase (n-C16:1)
+Equation: h2o_c + pa161_c --> 12dgr161_c + pi_c
+Genes: sll0545
+WT flux: 0.0006330394771783939
+MUTANT flux: 0.0006484522794655875
+
+REACTION: PAPA180
+Name: Phosphatidate phosphatase (n-C18:0)
+Equation: h2o_c + pa180_c --> 12dgr180_c + pi_c
+Genes: sll0545
+WT flux: 0.00010005258522249122
+MUTANT flux: 0.00010248859556615938
+
+REACTION: PAPA181
+Name: Phosphatidate phosphatase (n-C18:1)
+Equation: h2o_c + pa181_c --> 12dgr181_c + pi_c
+Genes: sll0545
+WT flux: 0.00044471994960423096
+MUTANT flux: 0.0004555476797909365
+
+REACTION: PAPA181_9
+Name: Phosphatidate phosphatase (n-C18 1)
+Equation: h2o_c + pa181_9_c --> 12dgr181_9_c + pi_c
+Genes: sll0545
+WT flux: 0.00044471994960423096
+MUTANT flux: 0.0004555476797909365
+
+REACTION: PAPA182_9_12
+Name: Phosphatidate phosphatase (n-C18 2)
+Equation: h2o_c + pa182_9_12_c --> 12dgr182_9_12_c + pi_c
+Genes: sll0545
+WT flux: 0.002415179134261715
+MUTANT flux: 0.0024739822260537946
+
+REACTION: PAPA184_6_9_12_15
+Name: Phosphatidate phosphatase (n-C18 4)
+Equation: h2o_c + pa184_6_9_12_15_c --> 12dgr184_6_9_12_15_c + pi_c
+Genes: sll0545
+WT flux: 0.00011070981547801975
+MUTANT flux: 0.00011340530060766761
+
+REACTION: PAPA183_9_12_15
+Name: Phosphatidate phosphatase (n-C18 3)
+Equation: h2o_c + pa183_9_12_15_c --> 12dgr183_9_12_15_c + pi_c
+Genes: sll0545
+WT flux: 4.9650155072815185e-05
+MUTANT flux: 5.085900231102647e-05
+
+REACTION: PAPA183_6_9_12
+Name: Phosphatidate phosphatase (n-C18 3)
+Equation: h2o_c + pa183_6_9_12_c --> 12dgr183_6_9_12_c + pi_c
+Genes: sll0545
+WT flux: 0.002745678651362577
+MUTANT flux: 0.0028125285141645667
+
+REACTION: DAGK160
+Name: Diacylglycerol kinase (n-C16:0)
+Equation: 12dgr160_c + atp_c --> adp_c + h_c + pa160_c
+Genes: slr0054
+WT flux: 0.0
+MUTANT flux: 0.0
+
+REACTION: DAGK161
+Name: Diacylglycerol kinase (n-C16:1)
+Equation: 12dgr161_c + atp_c --> adp_c + h_c + pa161_c
+Genes: slr0054
+WT flux: 0.0
+MUTANT flux: 0.0
+
+REACTION: DAGK180
+Name: Diacylglycerol kinase (n-C18:0)
+Equation: 12dgr180_c + atp_c --> adp_c + h_c + pa180_c
+Genes: slr0054
+WT flux: 0.0
+MUTANT flux: 0.0
+
+REACTION: DAGK181
+Name: Diacylglycerol kinase (n-C18:1)
+Equation: 12dgr181_c + atp_c --> adp_c + h_c + pa181_c
+Genes: slr0054
+WT flux: 0.0
+MUTANT flux: 0.0
+
+REACTION: DAGK_OLE_OLE_c
+Name: Diacylglycerol kinase(18:1(9Z)/18:1(9Z))
+Equation: 12dgr181_9_c + atp_c --> adp_c + h_c + pa181_9_c
+Genes: slr0054
+WT flux: 0.0
+MUTANT flux: 0.0
+
+REACTION: DAGK_LNA_LNA_c
+Name: Diacylglycerol kinase(18:2(9Z,12Z)/18:2(9Z,12Z))
+Equation: 12dgr182_9_12_c + atp_c --> adp_c + h_c + pa182_9_12_c
+Genes: slr0054
+WT flux: 0.0
+MUTANT flux: 0.0
+
+REACTION: DAGK184_6_9_12_15
+Name: Diacylglycerol kinase (n-C18:4)
+Equation: 12dgr184_6_9_12_15_c + atp_c --> adp_c + h_c + pa184_6_9_12_15_c
+Genes: slr0054
+WT flux: 0.0
+MUTANT flux: 0.0
+
+REACTION: DAGK183_9_12_15
+Name: Diacylglycerol kinase (n-C18:3 9 12 15)
+Equation: 12dgr183_9_12_15_c + atp_c --> adp_c + h_c + pa183_9_12_15_c
+Genes: slr0054
+WT flux: 0.0
+MUTANT flux: 0.0
+
+REACTION: DAGK183_6_9_12
+Name: Diacylglycerol kinase (n-C18:3 6 9 12)
+Equation: 12dgr183_6_9_12_c + atp_c --> adp_c + h_c + pa183_6_9_12_c
+Genes: slr0054
+WT flux: 0.0
+MUTANT flux: 0.0
+
+REACTION: 12MGDG160
+Name: UDPglucose:1,2-diacylglycerol 3-beta-D-glucosyltransferase (n-C16 0)
+Equation: 12dgr160_c + udpg_c --> 12mgdg160_c + h_c + udp_c
+Genes: sll1377
+WT flux: 0.007508457542148007
+MUTANT flux: 0.007691268213126592
+
+REACTION: 12MGDG161
+Name: UDPglucose:1,2-diacylglycerol 3-beta-D-glucosyltransferase (n-C16 1)
+Equation: 12dgr161_c + udpg_c --> 12mgdg161_c + h_c + udp_c
+Genes: sll1377
+WT flux: 0.0005049019557530981
+MUTANT flux: 0.0005171949553194535
+
+REACTION: 12MGDG180
+Name: UDPglucose:1,2-diacylglycerol 3-beta-D-glucosyltransferase (n-C18 0)
+Equation: 12dgr180_c + udpg_c --> 12mgdg180_c + h_c + udp_c
+Genes: sll1377
+WT flux: 8.237412091626156e-05
+MUTANT flux: 8.437970837965752e-05
+
+REACTION: 12MGDG181
+Name: UDPglucose:1,2-diacylglycerol 3-beta-D-glucosyltransferase (n-C18 1)
+Equation: 12dgr181_c + udpg_c --> 12mgdg181_c + h_c + udp_c
+Genes: sll1377
+WT flux: 0.00017264713013956194
+MUTANT flux: 0.00017685062167243292
+
+REACTION: 12MGDG181_9
+Name: UDPglucose:1,2-diacylglycerol 3-beta-D-glucosyltransferase (n-C18 1)
+Equation: 12dgr181_9_c + udpg_c --> 12mgdg181_9_c + h_c + udp_c
+Genes: sll1377
+WT flux: 0.00017264713013956194
+MUTANT flux: 0.00017685062167243292
+
+REACTION: 12MGDG182_9_12
+Name: UDPglucose:1,2-diacylglycerol 3-beta-D-glucosyltransferase (n-C18 2)
+Equation: 12dgr182_9_12_c + udpg_c --> 12mgdg182_9_12_c + h_c + udp_c
+Genes: sll1377
+WT flux: 0.002116902066286393
+MUTANT flux: 0.002168442916715583
+
+REACTION: 12MGDG184_6_9_12_15
+Name: UDPglucose:1,2-diacylglycerol 3-beta-D-glucosyltransferase (n-C18 4)
+Equation: 12dgr184_6_9_12_15_c + udpg_c --> 12mgdg184_6_9_12_15_c + h_c + udp_c
+Genes: sll1377
+WT flux: 0.00017603236798543573
+MUTANT flux: 0.00018031828092091202
+
+REACTION: 12MGDG183_9_12_15
+Name: UDPglucose:1,2-diacylglycerol 3-beta-D-glucosyltransferase (n-C18 3)
+Equation: 12dgr183_9_12_15_c + udpg_c --> 12mgdg183_9_12_15_c + h_c + udp_c
+Genes: sll1377
+WT flux: 3.911830399676349e-05
+MUTANT flux: 4.0070729093535993e-05
+
+REACTION: 12MGDG183_6_9_12
+Name: UDPglucose:1,2-diacylglycerol 3-beta-D-glucosyltransferase (n-C18 3)
+Equation: 12dgr183_6_9_12_c + udpg_c --> 12mgdg183_6_9_12_c + h_c + udp_c
+Genes: sll1377
+WT flux: 0.003914087224906932
+MUTANT flux: 0.004009384682185919
+
+REACTION: MGDGE160
+Name: 1,2-diacylglycerol 3-beta-D-glucose epimerase(n-C16 0)
+Equation: 12mgdg160_c <=> mgdg160_c
+Genes: sll1376
+WT flux: 0.007508457542148007
+MUTANT flux: 0.007691268213126592
+
+REACTION: MGDGE161
+Name: 1,2-diacylglycerol 3-beta-D-glucose epimerase(n-C16 1)
+Equation: 12mgdg161_c <=> mgdg161_c
+Genes: sll1376
+WT flux: 0.0005049019557530981
+MUTANT flux: 0.0005171949553194534
+
+REACTION: MGDGE180
+Name: 1,2-diacylglycerol 3-beta-D-glucose epimerase(n-C18 0)
+Equation: 12mgdg180_c <=> mgdg180_c
+Genes: sll1376
+WT flux: 8.237412091626156e-05
+MUTANT flux: 8.437970837965753e-05
+
+REACTION: MGDGE181
+Name: 1,2-diacylglycerol 3-beta-D-glucose epimerase(n-C18 1)
+Equation: 12mgdg181_c <=> mgdg181_c
+Genes: sll1376
+WT flux: 0.00017264713013956192
+MUTANT flux: 0.00017685062167243292
+
+REACTION: MGDGE181_9
+Name: 1,2-diacylglycerol 3-beta-D-glucose epimerase(n-C18 1)
+Equation: 12mgdg181_9_c <=> mgdg181_9_c
+Genes: sll1376
+WT flux: 0.00017264713013956192
+MUTANT flux: 0.00017685062167243292
+
+REACTION: MGDGE182_9_12
+Name: 1,2-diacylglycerol 3-beta-D-glucose epimerase(n-C18 2)
+Equation: 12mgdg182_9_12_c <=> mgdg182_9_12_c
+Genes: sll1376
+WT flux: 0.0021169020662863925
+MUTANT flux: 0.002168442916715583
+
+REACTION: MGDGE184_6_9_12_15
+Name: 1,2-diacylglycerol 3-beta-D-glucose epimerase(n-C18 4)
+Equation: 12mgdg184_6_9_12_15_c <=> mgdg184_6_9_12_15_c
+Genes: sll1376
+WT flux: 0.00017603236798543575
+MUTANT flux: 0.00018031828092091202
+
+REACTION: MGDGE183_9_12_15
+Name: 1,2-diacylglycerol 3-beta-D-glucose epimerase(n-C18 3)
+Equation: 12mgdg183_9_12_15_c <=> mgdg183_9_12_15_c
+Genes: sll1376
+WT flux: 3.91183039967635e-05
+MUTANT flux: 4.0070729093536e-05
+
+REACTION: MGDGE183_6_9_12
+Name: 1,2-diacylglycerol 3-beta-D-glucose epimerase(n-C18 3)
+Equation: 12mgdg183_6_9_12_c <=> mgdg183_6_9_12_c
+Genes: sll1376
+WT flux: 0.003914087224906932
+MUTANT flux: 0.004009384682185919
+
+REACTION: GGGT_PALM_PALM_4_c
+Name: Galactolipid galactosyltransferase(16:0/16:0)
+Equation: 2.0 mgdg160_c --> 12dgr160_c + dgdg160_c
+Genes: slr1508
+WT flux: 0.002169812080025605
+MUTANT flux: 0.0022226411464510696
+
+REACTION: MGT161
+Name: 3-beta-D-Galactosyl-1,2-diacylglycerol mono-beta-D-galactosyldiacyl glycerol beta-D-galactosyltransferase (n-C16 1)
+Equation: 2.0 mgdg161_c --> 12dgr161_c + dgdg161_c
+Genes: slr1508
+WT flux: 0.00016023459137135814
+MUTANT flux: 0.0001641358710946763
+
+REACTION: MGT180
+Name: 3-beta-D-Galactosyl-1,2-diacylglycerol mono-beta-D-galactosyldiacyl glycerol beta-D-galactosyltransferase (n-C18 0)
+Equation: 2.0 mgdg180_c --> 12dgr180_c + dgdg180_c
+Genes: slr1508
+WT flux: 3.7112237125134584e-05
+MUTANT flux: 3.801581990925209e-05
+
+REACTION: MGT181
+Name: 3-beta-D-Galactosyl-1,2-diacylglycerol mono-beta-D-galactosyldiacyl glycerol beta-D-galactosyltransferase (n-C18 1)
+Equation: 2.0 mgdg181_c --> 12dgr181_c + dgdg181_c
+Genes: slr1508
+WT flux: 4.852174245752395e-05
+MUTANT flux: 4.9703115894866764e-05
+
+REACTION: MGT181_9
+Name: 3-beta-D-Galactosyl-1,2-diacylglycerol mono-beta-D-galactosyldiacyl glycerol beta-D-galactosyltransferase (n-C18 1)
+Equation: 2.0 mgdg181_9_c --> 12dgr181_9_c + dgdg181_9_c
+Genes: slr1508
+WT flux: 4.852174245752395e-05
+MUTANT flux: 4.9703115894866764e-05
+
+REACTION: MGT182_9_12
+Name: 3-beta-D-Galactosyl-1,2-diacylglycerol mono-beta-D-galactosyldiacyl glycerol beta-D-galactosyltransferase (n-C18 2)
+Equation: 2.0 mgdg182_9_12_c --> 12dgr182_9_12_c + dgdg182_9_12_c
+Genes: slr1508
+WT flux: 0.000553925214928529
+MUTANT flux: 0.0005674117985103911
+
+REACTION: MGT184_6_9_12_15
+Name: 3-beta-D-Galactosyl-1,2-diacylglycerol mono-beta-D-galactosyldiacyl glycerol beta-D-galactosyltransferase (n-C18 4)
+Equation: 2.0 mgdg184_6_9_12_15_c --> 12dgr184_6_9_12_15_c + dgdg184_6_9_12_15_c
+Genes: slr1508
+WT flux: 6.532255250741595e-05
+MUTANT flux: 6.691298031324441e-05
+
+REACTION: MGT183_9_12_15
+Name: 3-beta-D-Galactosyl-1,2-diacylglycerol mono-beta-D-galactosyldiacyl glycerol beta-D-galactosyltransferase (n-C18 3)
+Equation: 2.0 mgdg183_9_12_15_c --> 12dgr183_9_12_15_c + dgdg183_9_12_15_c
+Genes: slr1508
+WT flux: 1.5797776614077563e-05
+MUTANT flux: 1.618240982623569e-05
+
+REACTION: MGT183_6_9_12
+Name: 3-beta-D-Galactosyl-1,2-diacylglycerol mono-beta-D-galactosyldiacyl glycerol beta-D-galactosyltransferase (n-C18 3)
+Equation: 2.0 mgdg183_6_9_12_c --> 12dgr183_6_9_12_c + dgdg183_6_9_12_c
+Genes: slr1508
+WT flux: 0.001204893914772106
+MUTANT flux: 0.001234229828810516
+
+REACTION: SQD2_160
+Name: Sulfoquinovosyltransferase  (n-C16 0)
+Equation: 12dgr160_c + h2o_c + udpsq_c --> h_c + sqdg160_c + udp_c
+Genes: slr0384
+WT flux: 0.0024957979466653005
+MUTANT flux: 0.0025565638888972032
+
+REACTION: SQD2_161
+Name: Sulfoquinovosyltransferase  (n-C16 1)
+Equation: 12dgr161_c + h2o_c + udpsq_c --> h_c + sqdg161_c + udp_c
+Genes: slr0384
+WT flux: 0.0002883721127966539
+MUTANT flux: 0.0002953931952408102
+
+REACTION: SQD2_180
+Name: Sulfoquinovosyltransferase  (n-C18 0)
+Equation: 12dgr180_c + h2o_c + udpsq_c --> h_c + sqdg180_c + udp_c
+Genes: slr0384
+WT flux: 5.4790701431364234e-05
+MUTANT flux: 5.6124707095753945e-05
+
+REACTION: SQD2_181
+Name: Sulfoquinovosyltransferase  (n-C18 1)
+Equation: 12dgr181_c + h2o_c + udpsq_c --> h_c + sqdg181_c + udp_c
+Genes: slr0384
+WT flux: 0.00032059456192219297
+MUTANT flux: 0.00032840017401337035
+
+REACTION: SQD2_181_9
+Name: Sulfoquinovosyltransferase  (n-C18 1)
+Equation: 12dgr181_9_c + h2o_c + udpsq_c --> h_c + sqdg181_9_c + udp_c
+Genes: slr0384
+WT flux: 0.00032059456192219297
+MUTANT flux: 0.00032840017401337035
+
+REACTION: SQD2_182_9_12
+Name: Sulfoquinovosyltransferase  (n-C18 2)
+Equation: 12dgr182_9_12_c + h2o_c + udpsq_c --> h_c + sqdg182_9_12_c + udp_c
+Genes: slr0384
+WT flux: 0.0008522022829038508
+MUTANT flux: 0.0008729511078486033
+
+REACTION: SQD2_184_6_9_12_15
+Name: Sulfoquinovosyltransferase  (n-C18 4)
+Equation: 12dgr184_6_9_12_15_c + h2o_c + udpsq_c --> h_c + sqdg184_6_9_12_15_c + udp_c
+Genes: slr0384
+WT flux: 0.0
+MUTANT flux: 0.0
+
+REACTION: SQD2_183_9_12_15
+Name: Sulfoquinovosyltransferase  (n-C18 3)
+Equation: 12dgr183_9_12_15_c + h2o_c + udpsq_c --> h_c + sqdg183_9_12_15_c + udp_c
+Genes: slr0384
+WT flux: 2.6329627690129262e-05
+MUTANT flux: 2.6970683043726147e-05
+
+REACTION: SQD2_183_6_9_12
+Name: Sulfoquinovosyltransferase  (n-C18 3)
+Equation: 12dgr183_6_9_12_c + h2o_c + udpsq_c --> h_c + sqdg183_6_9_12_c + udp_c
+Genes: slr0384
+WT flux: 3.648534122775056e-05
+MUTANT flux: 3.737366078916337e-05
+
+REACTION: DASYN160
+Name: CDP-diacylglycerol synthetase (n-C16:0)
+Equation: ctp_c + h_c + pa160_c --> cdpdhdecg_c + ppi_c
+Genes: slr1369
+WT flux: 0.0008355268520334355
+MUTANT flux: 0.0008558696752542434
+
+REACTION: DASYN161
+Name: CDP-diacylglycerol synthetase (n-C16:1)
+Equation: ctp_c + h_c + pa161_c --> cdpdhdec9eg_c + ppi_c
+Genes: slr1369
+WT flux: 1.429322646035589e-05
+MUTANT flux: 1.464122793802277e-05
+
+REACTION: DASYN180
+Name: CDP-diacylglycerol synthetase (n-C18:0)
+Equation: ctp_c + h_c + pa180_c --> cdpdodecg_c + ppi_c
+Genes: slr1369
+WT flux: 2.8586452920711776e-05
+MUTANT flux: 2.9282455876045533e-05
+
+REACTION: DASYN181
+Name: CDP-diacylglycerol synthetase (n-C18:1)
+Equation: ctp_c + h_c + pa181_c --> cdpdodec11eg_c + ppi_c
+Genes: slr1369
+WT flux: 5.328615127764257e-05
+MUTANT flux: 5.458352520754102e-05
+
+REACTION: DASYN181_9
+Name: CDP-diacylglycerol synthetase (n-C18 1)
+Equation: ctp_c + h_c + pa181_9_c --> cdpdodec9eg_c + ppi_c
+Genes: slr1369
+WT flux: 5.3286151277642564e-05
+MUTANT flux: 5.458352520754102e-05
+
+REACTION: DASYN182_9_12
+Name: CDP-diacylglycerol synthetase (n-C18 2)
+Equation: ctp_c + h_c + pa182_9_12_c --> cdpdodec912eg_c + ppi_c
+Genes: slr1369
+WT flux: 0.0005415126761603254
+MUTANT flux: 0.0005546970479326345
+
+REACTION: DASYN184_6_9_12_15
+Name: CDP-diacylglycerol synthetase (n-C18 4)
+Equation: ctp_c + h_c + pa184_6_9_12_15_c --> cdpdodec691215eg_c + ppi_c
+Genes: slr1369
+WT flux: 0.0
+MUTANT flux: 0.0
+
+REACTION: DASYN183_6_9_12
+Name: CDP-diacylglycerol synthetase (n-C18 3)
+Equation: ctp_c + h_c + pa183_6_9_12_c --> cdpdodec6912eg_c + ppi_c
+Genes: slr1369
+WT flux: 0.0
+MUTANT flux: 0.0
+
+REACTION: DASYN183_9_12_15
+Name: CDP-diacylglycerol synthetase (n-C18 3)
+Equation: ctp_c + h_c + pa183_9_12_15_c --> cdpdodec91215eg_c + ppi_c
+Genes: slr1369
+WT flux: 0.00013528413465547376
+MUTANT flux: 0.00013857793811514535
+
+REACTIONS ASSOCIATED WITH slr2103:
+No reaction associated with slr2103 found.
+
+REACTIONS CONNECTED TO 12dgr160_c:
+
+REACTION: PAPA160
+Name: Phosphatidate phosphatase (n-C16:0)
+Equation: h2o_c + pa160_c --> 12dgr160_c + pi_c
+Genes: sll0545
+WT flux: 0.007834443408787702
+MUTANT flux: 0.008025190955572725
+
+REACTION: DAGK160
+Name: Diacylglycerol kinase (n-C16:0)
+Equation: 12dgr160_c + atp_c --> adp_c + h_c + pa160_c
+Genes: slr0054
+WT flux: 0.0
+MUTANT flux: 0.0
+
+REACTION: 12MGDG160
+Name: UDPglucose:1,2-diacylglycerol 3-beta-D-glucosyltransferase (n-C16 0)
+Equation: 12dgr160_c + udpg_c --> 12mgdg160_c + h_c + udp_c
+Genes: sll1377
+WT flux: 0.007508457542148007
+MUTANT flux: 0.007691268213126592
+
+REACTION: SQD2_160
+Name: Sulfoquinovosyltransferase  (n-C16 0)
+Equation: 12dgr160_c + h2o_c + udpsq_c --> h_c + sqdg160_c + udp_c
+Genes: slr0384
+WT flux: 0.0024957979466653005
+MUTANT flux: 0.0025565638888972032
+
+REACTION: GGGT_PALM_PALM_4_c
+Name: Galactolipid galactosyltransferase(16:0/16:0)
+Equation: 2.0 mgdg160_c --> 12dgr160_c + dgdg160_c
+Genes: slr1508
+WT flux: 0.002169812080025605
+MUTANT flux: 0.0022226411464510696
+
+POTENTIAL FATTY ACYL-CoA METABOLITES:
+
+REACTIONS CONNECTED TO THESE METABOLITES:
+accoa_c | Acetyl-CoA
+coa_c | CoA
+succoa_c | Succinyl-CoA
+malcoa_c | Malonyl-CoA
+dpcoa_c | Dephospho-CoA
+sbzcoa_c | 2-Succinylbenzoyl-CoA
+14dhncoa_c | 1,4-Dihydroxy-2-naphthoyl-CoA
+aacoa_c | Acetoacetyl-CoA
+3hbcoa__R_c | (R)-3-Hydroxybutanoyl-CoA
+
+POTENTIAL LONG-CHAIN FATTY ACYL-ACP METABOLITES:
+palmACP_c | (9Z)-Hexadecanoyl-[acp] | Formula: C16H31OSR
+hdeceACP_c | Hexadecenoyl-[acyl-carrier protein] | Formula: C16H29OSR
+ocdcaACP_c | Octadecanoyl-[acyl-carrier protein] | Formula: C18H35OSR
+octe_6_9_12_ACP_c | gamma-Linolenoyl-ACPgamma-Linolenoyl-[acyl-carrier protein](6Z,9Z,12Z)-Octadecatrienoyl-ACP(6Z,9Z,12Z)-Octadecatrienoyl-[acyl-carrier protein] | Formula: C18H29OSR
+octe_6_9_12_15_ACP_c | Stearidonoyl-[acp]Stearidonoyl-[acyl-carrier protein](6Z,9Z,12Z,Z15)-Octadecatrienoyl-ACP(6Z,9Z,12Z,Z15)-Octadecatrienoyl-[acyl-carrier protein] | Formula: C18H27OSR
+3opalmACP_c | 3-Oxohexadecanoyl-[acp] | Formula: C16H29O2SR
+3oxocdacp_c | 3-Oxostearoyl-[acp] | Formula: C18H33O2SR
+3hpalmACP_c | (3R)-3-Hydroxypalmitoyl-[acyl-carrier protein] | Formula: C16H31O2SR
+3hoctaACP_c | 3-Hydroxyoctadecanoyl-[acp] | Formula: C18H35O2SR
+tpalm2eACP_c | trans-Hexadec-2-enoyl-[acp] | Formula: C16H29OSR
+toctd2eACP_c | (2E)-Octadecenoyl-[acp] | Formula: C18H33OSR
+t3c9palmeACP_c | Trans-3-cis-9-palmitoleoyl-[acyl-carrier protein] | Formula: C16H27ORS
+hdeACP_c | Cis-hexadec-9-enoyl-[acyl-carrier protein] (n-C16:1) | Formula: C16H29ORS
+octeACP_c | Cis-octadec-11-enoyl-[acyl-carrier protein] (n-C18:1) | Formula: C18H33ORS
+octe_9_ACP_c | Cis-octadec-9-enoyl-[acyl-carrier protein] (n-C18 1) | Formula: C18H33ORS
+
+REACTIONS CONNECTED TO FATTY ACYL-ACP:
+
+METABOLITE: palmACP_c | (9Z)-Hexadecanoyl-[acp]
+EAR160y |  | nadp_c + palmACP_c <=> h_c + nadph_c + tpalm2eACP_c | WT: -0.030589259933674277 | MUTANT: -0.031334025832904976
+LI0011 |  | h_c + malACP_c + palmACP_c --> 3oxocdacp_c + ACP_c + co2_c | WT: 0.013249319412032006 | MUTANT: 0.013571904571251035
+DES2_C16 |  | h_c + nadph_c + o2_c + palmACP_c <=> 2.0 h2o_c + hdeceACP_c + nadp_c | WT: 0.0 | MUTANT: 0.0
+G3PAT160 | Glycerol-3-phosphate acyltransferase (C16:0) | glyc3p_c + palmACP_c <=> 1hdecg3p_c + ACP_c | WT: 0.008669970260821138 | MUTANT: 0.008881060630826968
+AGPAT160 | 1-hexadecanoyl-sn-glycerol 3-phosphate O-acyltransferase (n-C16:0) | 1hdecg3p_c + palmACP_c --> ACP_c + pa160_c | WT: 0.008669970260821136 | MUTANT: 0.008881060630826968
+
+METABOLITE: hdeceACP_c | Hexadecenoyl-[acyl-carrier protein]
+DES2_C16 |  | h_c + nadph_c + o2_c + palmACP_c <=> 2.0 h2o_c + hdeceACP_c + nadp_c | WT: 0.0 | MUTANT: 0.0
+
+METABOLITE: ocdcaACP_c | Octadecanoyl-[acyl-carrier protein]
+G3PAT180 | Glycerol-3-phosphate acyltransferase (C18:0) | glyc3p_c + ocdcaACP_c --> 1odecg3p_c + ACP_c | WT: 0.000128639038143203 | MUTANT: 0.00013177105144220492
+LI0037 |  | h_c + nadph_c + o2_c + ocdcaACP_c <=> 2.0 h2o_c + nadp_c + octeacp_c | WT: 0.011996029133981848 | MUTANT: 0.01228810005836967
+AGPAT180 | 1-octadecanoyl-sn-glycerol 3-phosphate O-acyltransferase (n-C18:0) | 1odecg3p_c + ocdcaACP_c --> ACP_c + pa180_c | WT: 0.000128639038143203 | MUTANT: 0.00013177105144220494
+EAR180y |  | h_c + nadph_c + toctd2eACP_c <=> nadp_c + ocdcaACP_c | WT: 0.013249319412032006 | MUTANT: 0.013571904571251035
+DES2_9 | Delta-9 desaturase | h_c + nadph_c + o2_c + ocdcaACP_c --> 2.0 h2o_c + nadp_c + octe_9_ACP_c | WT: 0.0009960122017637469 | MUTANT: 0.0010202624099969549
+
+METABOLITE: octe_6_9_12_ACP_c | gamma-Linolenoyl-ACPgamma-Linolenoyl-[acyl-carrier protein](6Z,9Z,12Z)-Octadecatrienoyl-ACP(6Z,9Z,12Z)-Octadecatrienoyl-[acyl-carrier protein]
+G3PAT184_6_9_12_15 | Glycerol-3-phosphate acyltransferase (C18 4) | glyc3p_c + octe_6_9_12_ACP_c --> 1odec6912eg3p_c + ACP_c | WT: 0.0027456786513625764 | MUTANT: 0.0028125285141645663
+AGPAT183_6_9_12 | 1-octadec-enoyl-sn-glycerol 3-phosphate O-acyltransferase (n-C18 3) | 1odec6912eg3p_c + octe_6_9_12_ACP_c --> ACP_c + pa183_6_9_12_c | WT: 0.0027456786513625764 | MUTANT: 0.0028125285141645663
+DES2_6B |  | h_c + nadph_c + o2_c + octe_9_12_ACP_c <=> 2.0 h2o_c + nadp_c + octe_6_9_12_ACP_c | WT: 0.005491357302725152 | MUTANT: 0.005625057028329133
+
+METABOLITE: octe_6_9_12_15_ACP_c | Stearidonoyl-[acp]Stearidonoyl-[acyl-carrier protein](6Z,9Z,12Z,Z15)-Octadecatrienoyl-ACP(6Z,9Z,12Z,Z15)-Octadecatrienoyl-[acyl-carrier protein]
+G3PAT183_6_9_12 | Glycerol-3-phosphate acyltransferase (C18 3) | glyc3p_c + octe_6_9_12_15_ACP_c --> 1odec691215eg3p_c + ACP_c | WT: 0.00011070981547801976 | MUTANT: 0.00011340530060766761
+DES2_6 |  | h_c + nadph_c + o2_c + octe_9_12_15_ACP_c <=> 2.0 h2o_c + nadp_c + octe_6_9_12_15_ACP_c | WT: 0.0002214196309560395 | MUTANT: 0.0002268106012153352
+AGPAT184_6_9_12_15 | 1-octadec-enoyl-sn-glycerol 3-phosphate O-acyltransferase (n-C18 4) | 1odec691215eg3p_c + octe_6_9_12_15_ACP_c --> ACP_c + pa184_6_9_12_15_c | WT: 0.00011070981547801976 | MUTANT: 0.00011340530060766763
+
+METABOLITE: 3opalmACP_c | 3-Oxohexadecanoyl-[acp]
+3OAS160 |  | h_c + malACP_c + myrsACP_c --> 3opalmACP_c + ACP_c + co2_c | WT: 0.03058925993367428 | MUTANT: 0.031334025832904976
+3OAR160 |  | 3hpalmACP_c + nadp_c <=> 3opalmACP_c + h_c + nadph_c | WT: -0.030589259933674277 | MUTANT: -0.031334025832904976
+
+METABOLITE: 3oxocdacp_c | 3-Oxostearoyl-[acp]
+LI0011 |  | h_c + malACP_c + palmACP_c --> 3oxocdacp_c + ACP_c + co2_c | WT: 0.013249319412032006 | MUTANT: 0.013571904571251035
+LI0019 |  | 3oxocdacp_c + h_c + nadph_c <=> 3hoctaACP_c + nadp_c | WT: 0.013249319412032006 | MUTANT: 0.013571904571251035
+
+METABOLITE: 3hpalmACP_c | (3R)-3-Hydroxypalmitoyl-[acyl-carrier protein]
+3OAR160 |  | 3hpalmACP_c + nadp_c <=> 3opalmACP_c + h_c + nadph_c | WT: -0.030589259933674277 | MUTANT: -0.031334025832904976
+3HAD160 |  | 3hpalmACP_c <=> h2o_c + tpalm2eACP_c | WT: 0.030589259933674277 | MUTANT: 0.031334025832904976
+
+METABOLITE: 3hoctaACP_c | 3-Hydroxyoctadecanoyl-[acp]
+3HAD180 |  | 3hoctaACP_c <=> h2o_c + toctd2eACP_c | WT: 0.013249319412032006 | MUTANT: 0.013571904571251035
+LI0019 |  | 3oxocdacp_c + h_c + nadph_c <=> 3hoctaACP_c + nadp_c | WT: 0.013249319412032006 | MUTANT: 0.013571904571251035
+
+METABOLITE: tpalm2eACP_c | trans-Hexadec-2-enoyl-[acp]
+3HAD160 |  | 3hpalmACP_c <=> h2o_c + tpalm2eACP_c | WT: 0.030589259933674277 | MUTANT: 0.031334025832904976
+EAR160y |  | nadp_c + palmACP_c <=> h_c + nadph_c + tpalm2eACP_c | WT: -0.030589259933674277 | MUTANT: -0.031334025832904976
+
+METABOLITE: toctd2eACP_c | (2E)-Octadecenoyl-[acp]
+3HAD180 |  | 3hoctaACP_c <=> h2o_c + toctd2eACP_c | WT: 0.013249319412032006 | MUTANT: 0.013571904571251035
+EAR180y |  | h_c + nadph_c + toctd2eACP_c <=> nadp_c + ocdcaACP_c | WT: 0.013249319412032006 | MUTANT: 0.013571904571251035
+
+METABOLITE: t3c9palmeACP_c | Trans-3-cis-9-palmitoleoyl-[acyl-carrier protein]
+EAR161y | Enoyl-[acyl-carrier-protein] reductase (NADPH) (n-C16:1) | h_c + nadph_c + t3c9palmeACP_c --> hdeACP_c + nadp_c | WT: 0.0022906776090412468 | MUTANT: 0.0023464494248041754
+3HAD161 | 3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C16:1) | 3hcpalm9eACP_c --> h2o_c + t3c9palmeACP_c | WT: 0.0022906776090412468 | MUTANT: 0.002346449424804176
+
+METABOLITE: hdeACP_c | Cis-hexadec-9-enoyl-[acyl-carrier protein] (n-C16:1)
+EAR161y | Enoyl-[acyl-carrier-protein] reductase (NADPH) (n-C16:1) | h_c + nadph_c + t3c9palmeACP_c --> hdeACP_c + nadp_c | WT: 0.0022906776090412468 | MUTANT: 0.0023464494248041754
+3OAS181 | 3-oxoacyl-[acyl-carrier-protein] synthase (n-C18:1) | h_c + hdeACP_c + malACP_c --> 3ocvac11eACP_c + ACP_c + co2_c | WT: 0.000996012201763747 | MUTANT: 0.0010202624099969549
+G3PAT161 | Glycerol-3-phosphate acyltransferase (C16:1) | glyc3p_c + hdeACP_c --> 1hdec9eg3p_c + ACP_c | WT: 0.0006473327036387498 | MUTANT: 0.0006630935074036102
+AGPAT161 | 1-hexadec-7-enoyl-sn-glycerol 3-phosphate O-acyltransferase (n-C16:1) | 1hdec9eg3p_c + hdeACP_c --> ACP_c + pa161_c | WT: 0.0006473327036387497 | MUTANT: 0.0006630935074036102
+
+METABOLITE: octeACP_c | Cis-octadec-11-enoyl-[acyl-carrier protein] (n-C18:1)
+G3PAT181 | Glycerol-3-phosphate acyltransferase (C18:1) | glyc3p_c + octeACP_c --> 1odec11eg3p_c + ACP_c | WT: 0.0004980061008818735 | MUTANT: 0.0005101312049984774
+EAR181y | Enoyl-[acyl-carrier-protein] reductase (NADPH) (n-C18:1) | h_c + nadph_c + t3c11vaceACP_c --> nadp_c + octeACP_c | WT: 0.000996012201763747 | MUTANT: 0.0010202624099969549
+AGPAT181 | 1-octadec-7-enoyl-sn-glycerol 3-phosphate O-acyltransferase (n-C18:1) | 1odec11eg3p_c + octeACP_c --> ACP_c + pa181_c | WT: 0.0004980061008818735 | MUTANT: 0.0005101312049984775
+
+METABOLITE: octe_9_ACP_c | Cis-octadec-9-enoyl-[acyl-carrier protein] (n-C18 1)
+AGPAT181_9 | 1-octadec-enoyl-sn-glycerol 3-phosphate O-acyltransferase (n-C18 1) | 1odec9eg3p_c + octe_9_ACP_c --> ACP_c + pa181_9_c | WT: 0.0004980061008818735 | MUTANT: 0.0005101312049984775
+G3PAT181_9 | Glycerol-3-phosphate acyltransferase (C18 1) | glyc3p_c + octe_9_ACP_c --> 1odec9eg3p_c + ACP_c | WT: 0.0004980061008818735 | MUTANT: 0.0005101312049984774
+DES2_9 | Delta-9 desaturase | h_c + nadph_c + o2_c + ocdcaACP_c --> 2.0 h2o_c + nadp_c + octe_9_ACP_c | WT: 0.0009960122017637469 | MUTANT: 0.0010202624099969549
+
+REACTIONS ASSOCIATED WITH slr1609:
+No reaction associated with slr1609 found.
+
+POTENTIAL FREE LONG-CHAIN FATTY ACIDS:
+
+REACTIONS CONNECTED TO FREE LONG-CHAIN FATTY ACIDS:
+
+ENGINEERED REACTION MASS BALANCE:
+TES160 | h2o_c + palmACP_c --> ACP_c + h_c + palm_c | Balance: {}
+FADD160 | atp_c + coa_c + palm_c --> amp_c + palmcoa_c + ppi_c | Balance: {}
+ATFA160 | 12dgr160_c + palmcoa_c --> coa_c + tag160_c | Balance: {}
+
+ENGINEERED TAG PATHWAY:
+TES160 | h2o_c + palmACP_c --> ACP_c + h_c + palm_c
+FADD160 | atp_c + coa_c + palm_c --> amp_c + palmcoa_c + ppi_c
+ATFA160 | 12dgr160_c + palmcoa_c --> coa_c + tag160_c
+DM_TAG160 | tag160_c --> 
+
+MAXIMUM TAG PRODUCTION:
+Status: optimal
+TAG flux: 0.09934611125823954
+
+ENGINEERED PATHWAY FLUXES:
+TES160 : 0.09934611125823953
+FADD160 : 0.09934611125823954
+ATFA160 : 0.09934611125823956
+DM_TAG160 : 0.09934611125823954
+
+IMPORTANT SUPPORTING FLUXES:
+Biomass: -1.986625254873484e-16
+Photon: -74.0278227130023
+CO2: -5.066651674170207
+palmACP: 0.09934611125823953
+
+DAG SUPPLY DURING TAG OPTIMIZATION:
+PAPA160 : 0.09934611125823953
+DAGK160 : 0.0
+GGGT_PALM_PALM_4_c : -6.021805326166535e-18
+
+WT VS GLGC TAG CAPACITY:
+WT TAG: 0.09934611125823954
+GLGC TAG: 0.09934611125823947
+TAG capacity change: -6.661338147750939e-14 %
+
+GLYCOGEN PATHWAY:
+WT GLGC: -4.291473411206381e-17
+Mutant GLGC: 0.0
+
+CARBON AND ENERGY:
+WT CO2: -5.066651674170207 | Mutant CO2: -5.066651674170212
+WT photon: -74.0278227130023 | Mutant photon: -74.0278227130023
+
+MAXIMUM GROWTH:
+WT: 0.10164484920547238
+GLGC mutant: 0.10052749975126606
+Common maximum used: 0.10052749975126606
+
+GROWTH-TAG TRADEOFF:
+
+Growth: 0 % | Absolute growth: 0.0
+WT TAG: 0.09934611125823954 | GLGC TAG: 0.09934611125823951 | Change: -3.3306690738754696e-14 %
+
+Growth: 20.0 % | Absolute growth: 0.020105499950253212
+WT TAG: 0.07969530503860689 | GLGC TAG: 0.07947688900659432 | Change: -0.2740638634945447 %
+
+Growth: 40.0 % | Absolute growth: 0.040210999900506424
+WT TAG: 0.060044498818977284 | GLGC TAG: 0.059607666754945596 | Change: -0.7275138815774795 %
+
+Growth: 60.0 % | Absolute growth: 0.06031649985075963
+WT TAG: 0.040393692599345526 | GLGC TAG: 0.039738444503298505 | Change: -1.6221544847267566 %
+
+Growth: 80.0 % | Absolute growth: 0.08042199980101285
+WT TAG: 0.020742886379713475 | GLGC TAG: 0.019869222251652826 | Change: -4.211873468656179 %
+
+Growth: 90.0 % | Absolute growth: 0.09047474977613945
+WT TAG: 0.01091748326989887 | GLGC TAG: 0.009934611125831005 | Change: -9.002735518521831 %
+
+Growth: 95.0 % | Absolute growth: 0.09550112476370275
+WT TAG: 0.006004781714990619 | GLGC TAG: 0.004967305562918267 | Change: -17.277499854530063 %
+
+Growth: 99.0 % | Absolute growth: 0.0995222247537534
+WT TAG: 0.002074620471064355 | GLGC TAG: 0.0009934611125870724 | Change: -52.11359733294297 %
+
+Growth: 100.0 % | Absolute growth: 0.10052749975126606
+WT TAG: 0.0010920801600846671 | GLGC TAG: 4.986397939807431e-15 | Change: -99.9999999995434 %
+
+GLYCOGEN-FREE BIOMASS CONTROL:
+WT-like model max growth: 0.10052749975127184
+GLGC knockout max growth: 0.10052749975127184
+Common maximum: 0.10052749975127184
+
+GLGC-ONLY EFFECT ON TAG:
+
+Growth: 0 % | Absolute growth: 0.0
+GLGC-active TAG: 0.09934611125823894 | GLGC-KO TAG: 0.09934611125823894 | Change: 0.0 %
+GLGC-active GLGC flux: 0.0 | GLGC-KO GLGC flux: 0.0
+
+Growth: 20.0 % | Absolute growth: 0.02010549995025437
+GLGC-active TAG: 0.07947688900659267 | GLGC-KO TAG: 0.07947688900659267 | Change: 0.0 %
+GLGC-active GLGC flux: 0.0 | GLGC-KO GLGC flux: 0.0
+
+Growth: 40.0 % | Absolute growth: 0.04021099990050874
+GLGC-active TAG: 0.059607666754947615 | GLGC-KO TAG: 0.059607666754947615 | Change: 0.0 %
+GLGC-active GLGC flux: 0.0 | GLGC-KO GLGC flux: 0.0
+
+Growth: 60.0 % | Absolute growth: 0.0603164998507631
+GLGC-active TAG: 0.03973844450329703 | GLGC-KO TAG: 0.03973844450329703 | Change: 0.0 %
+GLGC-active GLGC flux: 0.0 | GLGC-KO GLGC flux: 0.0
+
+Growth: 80.0 % | Absolute growth: 0.08042199980101748
+GLGC-active TAG: 0.01986922225165198 | GLGC-KO TAG: 0.01986922225165198 | Change: 0.0 %
+GLGC-active GLGC flux: 0.0 | GLGC-KO GLGC flux: 0.0
+
+Growth: 90.0 % | Absolute growth: 0.09047474977614466
+GLGC-active TAG: 0.009934611125828018 | GLGC-KO TAG: 0.009934611125828018 | Change: 0.0 %
+GLGC-active GLGC flux: 0.0 | GLGC-KO GLGC flux: 0.0
+
+Growth: 95.0 % | Absolute growth: 0.09550112476370824
+GLGC-active TAG: 0.004967305562913259 | GLGC-KO TAG: 0.004967305562913259 | Change: 0.0 %
+GLGC-active GLGC flux: 0.0 | GLGC-KO GLGC flux: 0.0
+
+Growth: 99.0 % | Absolute growth: 0.09952222475375912
+GLGC-active TAG: 0.0009934611125865587 | GLGC-KO TAG: 0.0009934611125865587 | Change: 0.0 %
+GLGC-active GLGC flux: 0.0 | GLGC-KO GLGC flux: 0.0
+
+Growth: 100.0 % | Absolute growth: 0.10052749975127184
+GLGC-active TAG: 5.9569502410128294e-15 | GLGC-KO TAG: 5.9569502410128294e-15 | Change: nan %
+GLGC-active GLGC flux: 0.0 | GLGC-KO GLGC flux: 0.0
+g1p_c | D-Glucose 1-phosphate | Formula: C6H11O9P | Charge: -2
+adpglc_c | ADP-glucose | Formula: C16H23N5O15P2 | Charge: -2
+amylose_c | Amylose | Formula: C6H10O5 | Charge: 0
+glycogen_c | Glycogen | Formula: C6H10O5R | Charge: 0
+glycogenN_c | Glycogen granule | Formula: R | Charge: 0
+
+GLYCOGEN SYNTHESIS REACTIONS:
+GLGC | atp_c + g1p_c + h_c --> adpglc_c + ppi_c
+AMYLS | adpglc_c --> adp_c + amylose_c + h_c
+ST0003 | amylose_c + glycogenN_c --> glycogen_c
+BM0010 | 6.1674780058651 glycogen_c --> 0.985 bm_glycogen_c
+SK_glycogenN_c | glycogenN_c <=> 
+
+ORIGINAL iRH783 GLYCOGEN REQUIREMENT:
+bm_glycogen coefficient: 0.0345
+Glycogen units per biomass flux: 0.2160182651800467
+Expected WT glycogen flux: 0.0219571439898538
+Observed WT GLGC flux: 0.021957143989854485
+
+GLYCOGEN VS TAG CARBON-REDIRECTION TEST:
+
+Biomass demand: 0 % | Absolute: 0.0
+WT glycogen storage: 0.0
+WT TAG: 0.09934611125823917 | GLGC-KO TAG: 0.09934611125823917
+Absolute TAG gain: 0.0 | Percent gain: 0.0 %
+WT GLGC: 0.0 | KO GLGC: 0.0
+
+Biomass demand: 20.0 % | Absolute: 0.020328969841094672
+WT glycogen storage: 0.004391428797970761
+WT TAG: 0.07947688900659267 | GLGC-KO TAG: 0.07987211759841004
+Absolute TAG gain: 0.00039522859181737036 | Percent gain: 0.49728744639789824 %
+WT GLGC: 0.004391428797970761 | KO GLGC: 0.0
+
+Biomass demand: 40.0 % | Absolute: 0.040657939682189344
+WT glycogen storage: 0.008782857595941522
+WT TAG: 0.059607666754945166 | GLGC-KO TAG: 0.06039812393858008
+Absolute TAG gain: 0.0007904571836349142 | Percent gain: 1.3260998570613136 %
+WT GLGC: 0.008782857595941522 | KO GLGC: 0.0
+
+Biomass demand: 60.0 % | Absolute: 0.06098690952328401
+WT glycogen storage: 0.01317428639391228
+WT TAG: 0.039738444503297936 | GLGC-KO TAG: 0.04092413027875017
+Absolute TAG gain: 0.001185685775452236 | Percent gain: 2.983724678387545 %
+WT GLGC: 0.01317428639391228 | KO GLGC: 0.0
+
+Biomass demand: 80.0 % | Absolute: 0.08131587936437869
+WT glycogen storage: 0.017565715191883043
+WT TAG: 0.019869222251650897 | GLGC-KO TAG: 0.021450136618920267
+Absolute TAG gain: 0.0015809143672693704 | Percent gain: 7.956599142364595 %
+WT GLGC: 0.017565715191883043 | KO GLGC: 0.0
+
+Biomass demand: 90.0 % | Absolute: 0.09148036428492602
+WT glycogen storage: 0.01976142959086842
+WT TAG: 0.009934611125827244 | GLGC-KO TAG: 0.0117131397890053
+Absolute TAG gain: 0.0017785286631780556 | Percent gain: 17.90234807031723 %
+WT GLGC: 0.01976142959086842 | KO GLGC: 0.0
+
+Biomass demand: 95.0 % | Absolute: 0.09656260674519969
+WT glycogen storage: 0.02085928679036111
+WT TAG: 0.004967305562915266 | GLGC-KO TAG: 0.006844641374047819
+Absolute TAG gain: 0.0018773358111325534 | Percent gain: 37.79384592621604 %
+WT GLGC: 0.02085928679036111 | KO GLGC: 0.0
+
+Biomass demand: 99.0 % | Absolute: 0.10062840071341862
+WT glycogen storage: 0.021737572549955262
+WT TAG: 0.0009934611125860388 | GLGC-KO TAG: 0.002949842642081995
+Absolute TAG gain: 0.0019563815294959563 | Percent gain: 196.92582877284224 %
+WT GLGC: 0.021737572549955262 | KO GLGC: 0.0
+
+Biomass demand: 100.0 % | Absolute: 0.10164484920547336
+WT glycogen storage: 0.0219571439898538
+WT TAG: 5.400921138410339e-15 | GLGC-KO TAG: 0.001976142959090352
+Absolute TAG gain: 0.001976142959084951 | Percent gain: nan %
+WT GLGC: 0.0219571439898538 | KO GLGC: 0.0
+
+GLYCOGEN STORAGE SENSITIVITY:
+Fixed biomass demand: 0.08131587936437869
+
+Glycogen burden: 0 x | Storage flux: 0.0
+WT TAG: 0.021450136618920267 | GLGC-KO TAG: 0.021450136618920267
+Absolute gain: 0.0 | Percent gain: 0.0 %
+
+Glycogen burden: 0.5 x | Storage flux: 0.008782857595941522
+WT TAG: 0.0206596794352853 | GLGC-KO TAG: 0.021450136618920267
+Absolute gain: 0.0007904571836349662 | Percent gain: 3.8260863926325994 %
+
+Glycogen burden: 1.0 x | Storage flux: 0.017565715191883043
+WT TAG: 0.019869222251650897 | GLGC-KO TAG: 0.021450136618920267
+Absolute gain: 0.0015809143672693704 | Percent gain: 7.956599142364595 %
+
+Glycogen burden: 2.0 x | Storage flux: 0.03513143038376609
+WT TAG: 0.018288307884381294 | GLGC-KO TAG: 0.021450136618920267
+Absolute gain: 0.0031618287345389733 | Percent gain: 17.288798693285678 %
+
+Glycogen burden: 3.0 x | Storage flux: 0.052697145575649126
+WT TAG: 0.016707393517111927 | GLGC-KO TAG: 0.021450136618920267
+Absolute gain: 0.00474274310180834 | Percent gain: 28.38709160079795 %
+
+Glycogen burden: 4.0 x | Storage flux: 0.07026286076753217
+WT TAG: 0.015126479149842697 | GLGC-KO TAG: 0.021450136618920267
+Absolute gain: 0.00632365746907757 | Percent gain: 41.80521723816564 %
+
+Glycogen burden: 5.0 x | Storage flux: 0.08782857595941522
+WT TAG: 0.013545564782573289 | GLGC-KO TAG: 0.021450136618920267
+Absolute gain: 0.007904571836346979 | Percent gain: 58.3554245483836 %
+
+Glycogen burden: 5.8 x | Storage flux: 0.10188114811292165
+WT TAG: 0.012280833288757892 | GLGC-KO TAG: 0.021450136618920267
+Absolute gain: 0.009169303330162375 | Percent gain: 74.66352742167854 %
+
+Glycogen burden: 6.0 x | Storage flux: 0.10539429115129825
+WT TAG: 0.011964650415303963 | GLGC-KO TAG: 0.021450136618920267
+Absolute gain: 0.009485486203616304 | Percent gain: 79.27925910383003 %
+
+Glycogen burden: 7.0 x | Storage flux: 0.1229600063431813
+WT TAG: 0.010383736048034446 | GLGC-KO TAG: 0.021450136618920267
+Absolute gain: 0.011066400570885822 | Percent gain: 106.57436321275328 %
