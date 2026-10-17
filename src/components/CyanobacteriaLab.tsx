@@ -5,6 +5,7 @@ import {
   ResponsiveContainer, Tooltip, XAxis, YAxis,
 } from 'recharts'
 import { CYANO_REFERENCE, glycogenSensitivity, lightResponse, tagTradeoff } from '../data/research'
+import { chartAxisStyle, chartTooltipStyle } from './chartTheme'
 import './cyanobacteria.css'
 
 type ChartView = 'allocation' | 'light' | 'glycogen'
@@ -30,12 +31,6 @@ const chartCopy: Record<ChartView, { title: string; subtitle: string; xLabel: st
   },
 }
 
-const tooltipStyle = {
-  background: '#13212e', border: '1px solid #314151', borderRadius: 10,
-  color: '#edf4f7', fontSize: 12, boxShadow: '0 12px 30px #0006',
-}
-const axisStyle = { fontSize: 11, fill: '#8394a6' }
-
 function CarbonPathway({ engineered }: { engineered: boolean }) {
   const nativeColor = engineered ? '#536d74' : '#43e4c1'
   const routeColor = engineered ? '#43e4c1' : '#4f686d'
@@ -54,9 +49,9 @@ function CarbonPathway({ engineered }: { engineered: boolean }) {
       <path className="cyano-flowline" d="M90 148 C111 148 108 178 133 178" stroke="#43e4c1" />
       <path className="cyano-flowline" d="M90 224 C111 224 108 193 133 193" stroke="#43e4c1" />
       <path className="cyano-flowline" d="M230 186H294" stroke="#43e4c1" />
-      <path className={`cyano-flowline ${!engineered ? 'cyano-flowline-active' : ''}`} d="M410 171C450 171 433 98 477 98" stroke={nativeColor} markerEnd="url(#cyano-arrow-native)" />
-      <path className={`cyano-flowline ${engineered ? 'cyano-flowline-active' : ''}`} d="M410 199C450 199 433 260 477 260" stroke={routeColor} markerEnd="url(#cyano-arrow-route)" />
-      <path className={`cyano-flowline cyano-proposed ${engineered ? 'cyano-flowline-active' : ''}`} d="M588 260H636" stroke={routeColor} markerEnd="url(#cyano-arrow-route)" />
+      <path className={`cyano-flowline ${!engineered ? 'cyano-flowline-active' : ''}`} d="M410 171C450 171 433 98 469 98" stroke={nativeColor} markerEnd="url(#cyano-arrow-native)" />
+      <path className={`cyano-flowline ${engineered ? 'cyano-flowline-active' : ''}`} d="M410 199C450 199 433 260 469 260" stroke={routeColor} markerEnd="url(#cyano-arrow-route)" />
+      <path className={`cyano-flowline cyano-proposed ${engineered ? 'cyano-flowline-active' : ''}`} d="M596 260H622" stroke={routeColor} markerEnd="url(#cyano-arrow-route)" />
       <g className="cyano-input">
         <circle cx="58" cy="139" r="24" /><circle cx="58" cy="139" r="7" fill="none" stroke="#d6c894" strokeWidth="1.5" />
         <path d="M58 125v-3M58 156v-3M44 139h-3M75 139h-3M48 129l-2-2M68 149l2 2M48 149l-2 2M68 129l2-2" stroke="#d6c894" strokeWidth="1.5" />
@@ -75,17 +70,17 @@ function CarbonPathway({ engineered }: { engineered: boolean }) {
         <text x="352" y="178" textAnchor="middle" className="cyano-svg-label">Central carbon</text>
         <text x="352" y="198" textAnchor="middle" className="cyano-svg-label">metabolism</text>
       </g>
-      <g className="cyano-node" opacity={engineered ? '.58' : '1'}>
-        <rect x="478" y="68" width="111" height="60" rx="12" stroke={nativeColor} />
+      <g className="cyano-node" opacity={engineered ? '.8' : '1'}>
+        <rect x="470" y="68" width="126" height="60" rx="12" stroke={nativeColor} />
         <text x="533" y="93" textAnchor="middle" className="cyano-svg-label">Glycogen</text><text x="533" y="111" textAnchor="middle" className="cyano-svg-small">Carbon storage</text>
         <text x="533" y="49" textAnchor="middle" className="cyano-svg-overline">NATIVE ALLOCATION</text>
       </g>
       <g className="cyano-node">
-        <rect x="478" y="230" width="111" height="60" rx="12" stroke={routeColor} />
+        <rect x="470" y="230" width="126" height="60" rx="12" stroke={routeColor} />
         <text x="533" y="255" textAnchor="middle" className="cyano-svg-label">Glycerolipids</text><text x="533" y="274" textAnchor="middle" className="cyano-svg-small">Native metabolism</text>
       </g>
-      <g className="cyano-tag-node" opacity={engineered ? '1' : '.48'}>
-        <rect x="638" y="230" width="69" height="60" rx="12" />
+      <g className="cyano-tag-node" opacity={engineered ? '1' : '.8'}>
+        <rect x="624" y="230" width="96" height="60" rx="12" />
         <text x="672" y="255" textAnchor="middle" className="cyano-svg-label">TAG</text><text x="672" y="273" textAnchor="middle" className="cyano-svg-small">Precursor</text>
         <text x="612" y="211" textAnchor="middle" className="cyano-svg-overline">ENGINEERED ROUTE</text>
       </g>
@@ -152,34 +147,34 @@ export default function CyanobacteriaLab() {
             <div className="cyano-chart" aria-label={`${copy.title}. ${copy.subtitle}`}>
               <ResponsiveContainer width="100%" height="100%" minWidth={0}>
                 {chartView === 'allocation' ? (
-                  <LineChart data={tagTradeoff} margin={{ top: 12, right: 18, bottom: 5, left: 0 }} accessibilityLayer>
+                  <LineChart data={tagTradeoff} margin={{ top: 14, right: 24, bottom: 12, left: 0 }} accessibilityLayer>
                     <CartesianGrid stroke="#243140" strokeDasharray="3 5" vertical={false} />
-                    <XAxis dataKey="biomassPercent" type="number" domain={[0, 100]} ticks={[0, 20, 40, 60, 80, 100]} axisLine={false} tickLine={false} tick={axisStyle} dy={8} />
-                    <YAxis domain={[0, 0.11]} ticks={[0, 0.025, 0.05, 0.075, 0.1]} width={45} tickFormatter={(v: number) => v.toFixed(2)} axisLine={false} tickLine={false} tick={axisStyle} />
-                    <Tooltip contentStyle={tooltipStyle} labelFormatter={(v) => `${v}% matched biomass demand`} formatter={(v) => `${Number(v).toFixed(6)} model units`} />
+                    <XAxis dataKey="biomassPercent" type="number" domain={[0, 100]} ticks={[0, 20, 40, 60, 80, 100]} axisLine={false} tickLine={false} tick={chartAxisStyle} dy={8} height={38} minTickGap={24} interval="preserveStartEnd" />
+                    <YAxis domain={[0, 0.11]} ticks={[0, 0.025, 0.05, 0.075, 0.1]} width={54} tickFormatter={(v: number) => v.toFixed(2)} axisLine={false} tickLine={false} tick={chartAxisStyle} />
+                    <Tooltip contentStyle={chartTooltipStyle} wrapperStyle={{ maxWidth: 'calc(100vw - 64px)', whiteSpace: 'normal' }} labelFormatter={(v) => `${v}% matched biomass demand`} formatter={(v) => `${Number(v).toFixed(6)} model units`} />
                     <ReferenceLine x={80} stroke="#798897" strokeDasharray="4 5" />
                     <Line type="linear" dataKey="wt" name="WT + glycogen allocation" stroke="#8295aa" strokeWidth={2} dot={{ r: 3, fill: '#8295aa', strokeWidth: 0 }} activeDot={{ r: 5 }} />
                     <Line type="linear" dataKey="engineered" name="No glycogen allocation (ΔGLGC)" stroke="#43e4c1" strokeWidth={2.5} dot={{ r: 3, fill: '#43e4c1', strokeWidth: 0 }} activeDot={{ r: 5 }} />
                     <ReferenceDot x={80} y={CYANO_REFERENCE.engineeredTag} r={5} fill="#43e4c1" stroke="#0d1723" strokeWidth={2} />
                   </LineChart>
                 ) : chartView === 'light' ? (
-                  <AreaChart data={lightResponse} margin={{ top: 12, right: 18, bottom: 5, left: 0 }} accessibilityLayer>
+                  <AreaChart data={lightResponse} margin={{ top: 14, right: 24, bottom: 12, left: 0 }} accessibilityLayer>
                     <defs><linearGradient id="cyano-light-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#43e4c1" stopOpacity={0.17} /><stop offset="100%" stopColor="#43e4c1" stopOpacity={0} /></linearGradient></defs>
                     <CartesianGrid stroke="#243140" strokeDasharray="3 5" vertical={false} />
-                    <XAxis dataKey="light" type="number" domain={[0, 1100]} ticks={[0, 200, 400, 600, 800, 1000]} axisLine={false} tickLine={false} tick={axisStyle} dy={8} />
-                    <YAxis domain={[0, 0.12]} ticks={[0, 0.03, 0.06, 0.09, 0.12]} width={45} axisLine={false} tickLine={false} tick={axisStyle} />
-                    <Tooltip contentStyle={tooltipStyle} labelFormatter={(v) => `${v} µmol photons m⁻² s⁻¹`} formatter={(v) => `${Number(v).toFixed(6)} h⁻¹`} />
+                    <XAxis dataKey="light" type="number" domain={[0, 1100]} ticks={[0, 200, 400, 600, 800, 1000]} axisLine={false} tickLine={false} tick={chartAxisStyle} dy={8} height={38} minTickGap={24} interval="preserveStartEnd" />
+                    <YAxis domain={[0, 0.12]} ticks={[0, 0.03, 0.06, 0.09, 0.12]} width={54} axisLine={false} tickLine={false} tick={chartAxisStyle} />
+                    <Tooltip contentStyle={chartTooltipStyle} wrapperStyle={{ maxWidth: 'calc(100vw - 64px)', whiteSpace: 'normal' }} labelFormatter={(v) => `${v} µmol photons m⁻² s⁻¹`} formatter={(v) => `${Number(v).toFixed(6)} h⁻¹`} />
                     <ReferenceLine x={400} stroke="#798897" strokeDasharray="4 5" />
                     <Area type="linear" dataKey="growth" name="Predicted growth" stroke="#43e4c1" strokeWidth={2.5} fill="url(#cyano-light-fill)" dot={{ r: 3, fill: '#43e4c1', strokeWidth: 0 }} activeDot={{ r: 5 }} />
                     <ReferenceDot x={400} y={CYANO_REFERENCE.growth} r={5} fill="#f0c77c" stroke="#0d1723" strokeWidth={2} />
                   </AreaChart>
                 ) : (
-                  <AreaChart data={glycogenSensitivity} margin={{ top: 12, right: 18, bottom: 5, left: 0 }} accessibilityLayer>
+                  <AreaChart data={glycogenSensitivity} margin={{ top: 14, right: 24, bottom: 12, left: 0 }} accessibilityLayer>
                     <defs><linearGradient id="cyano-gain-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor="#43e4c1" stopOpacity={0.17} /><stop offset="100%" stopColor="#43e4c1" stopOpacity={0} /></linearGradient></defs>
                     <CartesianGrid stroke="#243140" strokeDasharray="3 5" vertical={false} />
-                    <XAxis dataKey="burden" type="number" domain={[0, 7]} ticks={[0, 1, 2, 3, 4, 5, 6, 7]} axisLine={false} tickLine={false} tick={axisStyle} dy={8} />
-                    <YAxis domain={[0, 0.012]} ticks={[0, 0.003, 0.006, 0.009, 0.012]} width={45} axisLine={false} tickLine={false} tick={axisStyle} />
-                    <Tooltip contentStyle={tooltipStyle} labelFormatter={(v) => `${v}× reference glycogen burden`} formatter={(v) => `${Number(v).toFixed(6)} model units`} />
+                    <XAxis dataKey="burden" type="number" domain={[0, 7]} ticks={[0, 1, 2, 3, 4, 5, 6, 7]} axisLine={false} tickLine={false} tick={chartAxisStyle} dy={8} height={38} minTickGap={24} interval="preserveStartEnd" />
+                    <YAxis domain={[0, 0.012]} ticks={[0, 0.003, 0.006, 0.009, 0.012]} width={54} axisLine={false} tickLine={false} tick={chartAxisStyle} />
+                    <Tooltip contentStyle={chartTooltipStyle} wrapperStyle={{ maxWidth: 'calc(100vw - 64px)', whiteSpace: 'normal' }} labelFormatter={(v) => `${v}× reference glycogen burden`} formatter={(v) => `${Number(v).toFixed(6)} model units`} />
                     <ReferenceLine x={1} stroke="#798897" strokeDasharray="4 5" />
                     <Area type="linear" dataKey="gain" name="Absolute TAG capacity gain" stroke="#43e4c1" strokeWidth={2.5} fill="url(#cyano-gain-fill)" dot={{ r: 3, fill: '#43e4c1', strokeWidth: 0 }} activeDot={{ r: 5 }} />
                     <ReferenceDot x={1} y={CYANO_REFERENCE.engineeredTag - CYANO_REFERENCE.wtTag} r={5} fill="#f0c77c" stroke="#0d1723" strokeWidth={2} />

@@ -37,7 +37,7 @@ test('heatmaps select conditions and CSV/source downloads contain research data'
   const downloading=page.waitForEvent('download')
   await page.getByRole('button',{name:'Export data'}).click()
   const download=await downloading
-  expect(download.suggestedFilename()).toBe('meta-forge-proinsulin-scenarios.csv')
+  expect(download.suggestedFilename()).toBe('fluxnova-proinsulin-scenarios.csv')
   const stream=await download.createReadStream()
   const chunks=[]
   for await(const chunk of stream!)chunks.push(chunk)
@@ -79,7 +79,7 @@ test('guided tour navigates all stops, closes, and footer returns home',async({p
   await expect(page.locator('.tour-copy')).toContainText('5 OF 5')
   await page.getByRole('button',{name:'Finish',exact:true}).click()
   await expect(page.locator('.tour-dock')).toHaveCount(0)
-  await page.getByRole('link',{name:'Meta Forge, back to top'}).click()
+  await page.getByRole('link',{name:'FLUXNOVA, back to top'}).click()
   await expect(page).toHaveURL(/#overview$/)
   await page.getByRole('button',{name:'Guided tour'}).click()
   await expect(page.locator('.tour-dock')).toBeFocused()
@@ -104,7 +104,7 @@ test('mobile layout remains within viewport with working menu and controls',asyn
 
 test('desktop visual and internal links remain valid',async({page})=>{
   await page.goto('/')
-  await expect(page.getByRole('heading',{level:1})).toContainText('META FORGE')
+  await expect(page.getByRole('heading',{level:1})).toContainText('FLUXNOVA')
   const missing=await page.locator('a[href^="#"]').evaluateAll(links=>links.filter(a=>!document.getElementById(a.getAttribute('href')!.slice(1))).map(a=>a.getAttribute('href')))
   expect(missing).toEqual([])
   await page.screenshot({path:'test-results/desktop-hero.png'})

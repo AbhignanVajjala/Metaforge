@@ -1,6 +1,8 @@
-# Research data provenance and interpretation
+# FLUXNOVA research data provenance and interpretation
 
-The application is a static exhibition of the research outputs supplied by the project author. It does not run COBRApy, an FBA solver, or a biological simulation in the browser. Interactive nutrient controls select among the nine reported nutrient conditions and two reported growth policies. Lines connecting sampled conditions are a visual guide, not additional solver predictions.
+FLUXNOVA is a static exhibition of the research outputs supplied by the project author. It does not run COBRApy, an FBA solver, or a biological simulation in the browser. Interactive nutrient controls select among the nine reported nutrient conditions and two reported growth policies. Lines connecting sampled conditions are a visual guide, not additional solver predictions.
+
+The original transcripts retain historical MetaForge labels verbatim for source traceability; the application is branded FLUXNOVA.
 
 ## Supplied sources
 

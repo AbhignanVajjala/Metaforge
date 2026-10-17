@@ -1,8 +1,10 @@
-# META FORGE
+# FLUXNOVA
 
-**Engineering Metabolism for Real-World Impact**
+**Redirecting Metabolism. Redefining Possibilities.**
 
 An interactive scientific exhibition exploring two applications of Flux Balance Analysis (FBA): cyanobacteria as a potential source of biodiesel precursors, and *E. coli* as a host for recombinant proinsulin synthesis.
+
+FLUXNOVA is the project presented at the MetaForge hackathon. The GitHub repository remains `AbhignanVajjala/Metaforge`, and the existing Vercel project remains unchanged.
 
 Event theme: **Sustainable Technologies · Emerging Innovations · Ground-Zero Impact Solutions**
 
@@ -37,7 +39,7 @@ The build runs TypeScript checks before Vite creates the production files in `di
 - **Engineering insights:** interactive model-reaction candidates, biochemical roles, and supplied gene associations for THD2pp, GLUDy, ICDHyr, ACONTa, and CS.
 - **Impact and limitations:** the potential applications, interpretation limits, and source-output downloads.
 
-Layouts adapt to mobile and desktop. Controls include accessible names and state, charts have textual context, and motion respects reduced-motion preferences. Cyanobacteria chart tabs also support Arrow Left/Right, Home, and End.
+Explanatory copy uses a shared 16–18px type scale, with 14–15px scientific notes, chart labels, and controls. Main heading sizes and the teal/violet design are preserved. Layouts adapt to mobile and desktop. Controls include accessible names and state, charts have textual context, and motion respects reduced-motion preferences. Cyanobacteria chart tabs also support Arrow Left/Right, Home, and End.
 
 ## Scientific data and interpretation
 
@@ -102,6 +104,7 @@ src/
     EcoliLab.tsx             Nutrient controls, metrics, charts, heatmaps
     ResearchContext.tsx      FBA, candidate insights, impact, references
     research-context.css     Scientific context styling
+    chartTheme.ts            Shared accessible chart typography
   data/research.ts           Typed source datasets and constants
 public/
   favicon.svg
@@ -114,16 +117,15 @@ vite.config.ts               Vite configuration
 
 ## Commit and deploy
 
-The project was created in an empty repository. The following are manual publication steps; creating the application does not commit, push, or deploy it.
+The project is maintained in `AbhignanVajjala/Metaforge` on `main`. The existing deployment is https://metaforge-xi.vercel.app/. Pushes to the connected production branch can trigger Vercel deployment; verify each deployment before sharing it.
 
-Review the files, then create the initial commit when ready:
+Review future changes, then commit and push when ready:
 
 ```bash
 git status --short
 git add .gitignore README.md index.html package.json package-lock.json tsconfig.json vite.config.ts playwright.config.ts src public docs tests
 git diff --cached --stat
-git commit -m "Build Meta Forge interactive biotechnology showcase"
-git branch -M main
+git commit -m "Update FLUXNOVA biotechnology showcase"
 git push -u origin main
 ```
 
@@ -143,4 +145,4 @@ Create the deployment from `main`. The app uses in-page navigation and relative 
 
 ## Attribution
 
-META FORGE showcases research outputs supplied by the project author for *Synechocystis* sp. PCC 6803 (iRH783) and *Escherichia coli* BL21(DE3) (iHK1487). Model identifiers and supplied output files are documented in the provenance notes; original papers and complete versioned model metadata should be added when available.
+FLUXNOVA showcases research outputs supplied by the project author for *Synechocystis* sp. PCC 6803 (iRH783) and *Escherichia coli* BL21(DE3) (iHK1487). Model identifiers and supplied output files are documented in the provenance notes; original papers and complete versioned model metadata should be added when available.

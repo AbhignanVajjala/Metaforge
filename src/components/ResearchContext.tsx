@@ -127,18 +127,18 @@ function CandidateNetwork({ activeId }: { activeId: string }) {
   return (
     <div className="ctx-network-panel">
       <div className="ctx-network-heading"><span><Network size={14} /> METABOLIC CONNECTIONS</span><span>iHK1487</span></div>
-      <svg viewBox="0 0 490 320" className="ctx-network" role="img" aria-label={`Conceptual metabolic network highlighting ${activeId}. Connections summarize broad biological roles, not complete reaction stoichiometry.`}>
+      <svg viewBox="0 0 490 350" className="ctx-network" role="img" aria-label={`Conceptual metabolic network highlighting ${activeId}. Connections summarize broad biological roles, not complete reaction stoichiometry.`}>
         <defs>
           <pattern id="ctx-network-dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#26323f" /></pattern>
           <radialGradient id="ctx-node-glow"><stop offset="0%" stopColor="#b399ff" stopOpacity="0.17" /><stop offset="100%" stopColor="#b399ff" stopOpacity="0" /></radialGradient>
         </defs>
-        <rect width="490" height="320" fill="url(#ctx-network-dots)" />
+        <rect width="490" height="350" fill="url(#ctx-network-dots)" />
         {connections.map((connection) => {
           const active = connection.from === activeId || connection.to === activeId;
           return <path key={`${connection.from}-${connection.to}`} d={connection.path} className={`ctx-network-path ${active ? 'ctx-network-path-active' : ''}`} />;
         })}
         <text x="215" y="93" className="ctx-network-caption">NADPH</text>
-        <text x="189" y="291" className="ctx-network-caption">CENTRAL CARBON</text>
+        <text x="189" y="337" className="ctx-network-caption">CENTRAL CARBON</text>
         {Object.entries(networkPositions).map(([id, node]) => {
           const active = id === activeId;
           return (
@@ -147,11 +147,21 @@ function CandidateNetwork({ activeId }: { activeId: string }) {
               <circle cx={node.x} cy={node.y} r="26" className="ctx-node-outer" />
               <circle cx={node.x} cy={node.y} r="5" className="ctx-node-inner" />
               <text x={node.x} y={node.y + 45} textAnchor="middle" className="ctx-node-label">{id}</text>
-              <text x={node.x} y={node.y + 60} textAnchor="middle" className="ctx-node-description">{node.subtitle}</text>
+              <text x={node.x} y={node.y + 68} textAnchor="middle" className="ctx-node-description">{node.subtitle}</text>
             </g>
           );
         })}
       </svg>
+      <div className="ctx-network-mobile-key">
+        <p className="ctx-network-key-caption">NADPH · CENTRAL CARBON</p>
+        <dl className="ctx-network-key">
+          {Object.entries(networkPositions).map(([id, node]) => (
+            <div key={id} className={id === activeId ? 'ctx-network-key-active' : undefined}>
+              <dt>{id}</dt><dd>{node.subtitle}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
       <p className="ctx-network-note"><span className="ctx-violet-dot" /> Selected pathway <span>Conceptual network · not reaction stoichiometry</span></p>
     </div>
   );
@@ -214,11 +224,11 @@ export function ImpactAndLimitations() {
       </section>
       <footer className="ctx-footer">
         <div className="ctx-footer-main">
-          <div className="ctx-footer-brand"><a href="#overview" aria-label="Meta Forge, back to top"><Network size={23} strokeWidth={1.7} /><span>META<span className="ctx-brand-light">FORGE</span><span className="ctx-brand-dot">.</span></span></a><p>Engineering metabolism.<br />Exploring possibility.</p></div>
+          <div className="ctx-footer-brand"><a href="#overview" aria-label="FLUXNOVA, back to top"><Network size={23} strokeWidth={1.7} /><span>FLUX<span className="ctx-brand-light">NOVA</span><span className="ctx-brand-dot">.</span></span></a><p>Redirecting Metabolism.<br />Redefining Possibilities.</p></div>
           <div className="ctx-footer-sources"><span className="ctx-micro-label">EXPLORE THE EVIDENCE</span><a href="/research/cyanobacteria-output.txt" download><Download size={14} /> Cyanobacteria research output <span>TXT</span></a><a href="/research/ecoli-output.txt" download><Download size={14} /> E. coli research output <span>TXT</span></a></div>
           <div className="ctx-footer-references"><span className="ctx-micro-label">SCIENTIFIC REFERENCES</span><a href="https://doi.org/10.1038/nbt.1614" target="_blank" rel="noreferrer">What is flux balance analysis? <ArrowUpRight size={14} /></a><span>Orth, Thiele & Palsson · 2010</span><a href="https://cobrapy.readthedocs.io/" target="_blank" rel="noreferrer">COBRApy documentation <ArrowUpRight size={14} /></a></div>
         </div>
-        <div className="ctx-footer-bottom"><span>Meta Forge · Research outputs supplied by the project author.</span><span>COMPUTATIONAL EXPLORATION. REAL-WORLD QUESTIONS.</span></div>
+        <div className="ctx-footer-bottom"><span>FLUXNOVA · Research outputs supplied by the project author.</span><span>COMPUTATIONAL EXPLORATION. REAL-WORLD QUESTIONS.</span></div>
       </footer>
     </>
   );
